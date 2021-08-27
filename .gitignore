@@ -1,5 +1,5 @@
-Sample Output/
-!Sample Output/README.md
+Sample\ Output/*
+!Sample\ Output/README.md
 # *.pfx commented out below since we include this type in our input data
 
 ## Ignore Visual Studio temporary files, build results, and
