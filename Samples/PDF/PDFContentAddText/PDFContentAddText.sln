@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFContentAddText", "PDFContentAddText.csproj", "{F40B1C87-0D2F-4B06-AC45-E8DBF26D4B30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F40B1C87-0D2F-4B06-AC45-E8DBF26D4B30}.Debug|x64.ActiveCfg = Debug|x64
+		{F40B1C87-0D2F-4B06-AC45-E8DBF26D4B30}.Debug|x64.Build.0 = Debug|x64
+		{F40B1C87-0D2F-4B06-AC45-E8DBF26D4B30}.Debug|x86.ActiveCfg = Debug|x86
+		{F40B1C87-0D2F-4B06-AC45-E8DBF26D4B30}.Debug|x86.Build.0 = Debug|x86
+		{F40B1C87-0D2F-4B06-AC45-E8DBF26D4B30}.Release|x64.ActiveCfg = Release|x64
+		{F40B1C87-0D2F-4B06-AC45-E8DBF26D4B30}.Release|x64.Build.0 = Release|x64
+		{F40B1C87-0D2F-4B06-AC45-E8DBF26D4B30}.Release|x86.ActiveCfg = Release|x86
+		{F40B1C87-0D2F-4B06-AC45-E8DBF26D4B30}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAD08B33-BF2D-4900-A809-CD258F2ABEFE}
+	EndGlobalSection
+EndGlobal

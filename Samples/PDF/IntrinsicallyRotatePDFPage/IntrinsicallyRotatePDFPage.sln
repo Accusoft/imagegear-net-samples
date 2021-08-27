@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntrinsicallyRotatePDFPage", "IntrinsicallyRotatePDFPage.csproj", "{A9A712EB-9BE2-46ED-8CD6-890E8D84714B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9A712EB-9BE2-46ED-8CD6-890E8D84714B}.Debug|x64.ActiveCfg = Debug|x64
+		{A9A712EB-9BE2-46ED-8CD6-890E8D84714B}.Debug|x64.Build.0 = Debug|x64
+		{A9A712EB-9BE2-46ED-8CD6-890E8D84714B}.Debug|x86.ActiveCfg = Debug|x86
+		{A9A712EB-9BE2-46ED-8CD6-890E8D84714B}.Debug|x86.Build.0 = Debug|x86
+		{A9A712EB-9BE2-46ED-8CD6-890E8D84714B}.Release|x64.ActiveCfg = Release|x64
+		{A9A712EB-9BE2-46ED-8CD6-890E8D84714B}.Release|x64.Build.0 = Release|x64
+		{A9A712EB-9BE2-46ED-8CD6-890E8D84714B}.Release|x86.ActiveCfg = Release|x86
+		{A9A712EB-9BE2-46ED-8CD6-890E8D84714B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBE9A9A1-49CF-4FE1-8A91-C26FD13A85CA}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFContentExtractText", "PDFContentExtractText.csproj", "{7EFBDEF8-306D-49D7-BBFB-F41995AED2F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EFBDEF8-306D-49D7-BBFB-F41995AED2F8}.Debug|x64.ActiveCfg = Debug|x64
+		{7EFBDEF8-306D-49D7-BBFB-F41995AED2F8}.Debug|x64.Build.0 = Debug|x64
+		{7EFBDEF8-306D-49D7-BBFB-F41995AED2F8}.Debug|x86.ActiveCfg = Debug|x86
+		{7EFBDEF8-306D-49D7-BBFB-F41995AED2F8}.Debug|x86.Build.0 = Debug|x86
+		{7EFBDEF8-306D-49D7-BBFB-F41995AED2F8}.Release|x64.ActiveCfg = Release|x64
+		{7EFBDEF8-306D-49D7-BBFB-F41995AED2F8}.Release|x64.Build.0 = Release|x64
+		{7EFBDEF8-306D-49D7-BBFB-F41995AED2F8}.Release|x86.ActiveCfg = Release|x86
+		{7EFBDEF8-306D-49D7-BBFB-F41995AED2F8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {839FB7B7-5D49-4F67-8EED-F3DE12C602B2}
+	EndGlobalSection
+EndGlobal
