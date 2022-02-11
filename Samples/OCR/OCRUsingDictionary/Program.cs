@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System;
+﻿using System;
 using System.IO;
 using ImageGear.Core;
 using ImageGear.Evaluation;
@@ -22,7 +20,7 @@ namespace OCRUsingDictionary
 
             // Load raster page from a file.
             ImGearRasterPage rasterPage;			
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\OCRUsingDictionary.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/OCRUsingDictionary.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
                 rasterPage = (ImGearRasterPage)ImGearFileFormats.LoadPage(stream);
 
             // Create OCR engine for recognition.
@@ -30,7 +28,7 @@ namespace OCRUsingDictionary
             {
 
                 // Load user Dictionary file.
-                ocr.Settings.UserDictionary = new ImGearOCRDictionary(@"..\..\..\..\..\..\Sample Input\OCRUsingDictionary.1250");
+                ocr.Settings.UserDictionary = new ImGearOCRDictionary(@"../../../../../../Sample Input/OCRUsingDictionary.1250");
 
                 // Import raster page to the OCR engine.
                 using (ImGearOCRPage ocrPage = ocr.ImportPage(rasterPage))
@@ -43,7 +41,7 @@ namespace OCRUsingDictionary
                     ocrPage.Recognize();
 
                     // Save recognition results to a text file.
-                    File.WriteAllText(@"..\..\..\..\..\..\Sample Output\OCRUsingDictionary.txt", ocrPage.Text);
+                    File.WriteAllText(@"../../../../../../Sample Output/OCRUsingDictionary.txt", ocrPage.Text);
                 }
             }
         }

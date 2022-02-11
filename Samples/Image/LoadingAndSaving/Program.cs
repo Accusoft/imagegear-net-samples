@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Evaluation;
 using ImageGear.Core;
 using ImageGear.Formats;
@@ -20,11 +18,11 @@ namespace LoadingAndSaving
 
             // Load image page.
             ImGearPage imGearPage = null;
-            using (FileStream inputStream = new FileStream(@"..\..\..\..\..\..\Sample Input\water.jpg", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream inputStream = new FileStream(@"../../../../../../Sample Input/water.jpg", FileMode.Open, FileAccess.Read, FileShare.Read))
                 imGearPage = ImGearFileFormats.LoadPage(inputStream);
 
             // Save image page.
-            using (FileStream outputStream = new FileStream(@"..\..\..\..\..\..\Sample Output\LoadingAndSaving.png", FileMode.Create))
+            using (FileStream outputStream = new FileStream(@"../../../../../../Sample Output/LoadingAndSaving.png", FileMode.Create))
                 ImGearFileFormats.SavePage(imGearPage, outputStream, ImGearSavingFormats.PNG);
         }
     }

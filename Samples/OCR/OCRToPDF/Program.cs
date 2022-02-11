@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Core;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
@@ -27,7 +25,7 @@ namespace OCRToPDF
 
             // Load raster page from a file.
             ImGearRasterPage rasterPage;
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\MRCExampleFlyer.png", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/MRCExampleFlyer.png", FileMode.Open, FileAccess.Read, FileShare.Read))
                 rasterPage = (ImGearRasterPage)ImGearFileFormats.LoadPage(stream);
 
             // Create OCR engine.
@@ -59,7 +57,7 @@ namespace OCRToPDF
                         ocrPage.CreatePDFPage(pdfDocument, options);
 
                         // Save the PDF document.
-                        using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Output\OCRToPDF.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
+                        using (Stream stream = new FileStream(@"../../../../../../Sample Output/OCRToPDF.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
                             ImGearFileFormats.SaveDocument(pdfDocument, stream, 0, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.PDF, new ImGearSaveOptions());
                     }
                 }

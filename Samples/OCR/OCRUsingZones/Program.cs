@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System;
+﻿using System;
 using System.IO;
 using ImageGear.Core;
 using ImageGear.Evaluation;
@@ -22,7 +20,7 @@ namespace OCRUsingZones
 
             // Load raster page from a file.
             ImGearRasterPage rasterPage;
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\single-page.png", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/single-page.png", FileMode.Open, FileAccess.Read, FileShare.None))
                 rasterPage = (ImGearRasterPage)ImGearFileFormats.LoadPage(stream);
 
             // Create OCR engine for recognition.

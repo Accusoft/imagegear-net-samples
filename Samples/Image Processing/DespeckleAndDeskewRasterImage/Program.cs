@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Core;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
@@ -21,7 +19,7 @@ namespace DespeckleAndDeskewRasterImage
 
             // Load image page.
             ImGearPage imGearPage;
-            using (FileStream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\Bitonal-Cleanup-Sample.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream stream = new FileStream(@"../../../../../../Sample Input/Bitonal-Cleanup-Sample.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
                 imGearPage = ImGearFileFormats.LoadPage(stream, 0);
 
             // Despeckle the image.
@@ -31,7 +29,7 @@ namespace DespeckleAndDeskewRasterImage
             ImGearRasterProcessing.Deskew((ImGearRasterPage)imGearPage, 0.1, ImGearRotationModes.CLIP, null);
 
             // Save image page.
-            using (FileStream outputStream = new FileStream(@"..\..\..\..\..\..\Sample Output\DespeckleAndDeskewRasterImage.tif", FileMode.Create))
+            using (FileStream outputStream = new FileStream(@"../../../../../../Sample Output/DespeckleAndDeskewRasterImage.tif", FileMode.Create))
                 ImGearFileFormats.SavePage(imGearPage, outputStream, 1, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.TIF_G4, new ImGearSaveOptions());
         }
     }

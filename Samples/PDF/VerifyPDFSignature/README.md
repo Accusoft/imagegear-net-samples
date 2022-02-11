@@ -10,6 +10,10 @@ For more information about the ImageGear .NET API, please refer to the [ImageGea
 
 For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear-Net/latest/Windows/HTML/webframe.html#System_Requirements.html).
 
+## Support for .NET core
+
+Starting with ImageGear v26.0, ImageGear supports .NET Core. To build this sample using .NET Core, open the .dotnet.sln file in the project directory using Visual Studio 2017 or later. Follow the instructions below to build and run the sample.
+
 ## Building the Sample
 
 All samples can be built using Microsoft Visual Studio 2017 or later. To build this sample, open the .sln file in the project directory using Visual Studio, select a Solution Configuration (Debug or Release) and a Solution Platform (x64 or x86), and build with Build Solution located in the Build menu.  

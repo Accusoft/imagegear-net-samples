@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Evaluation;
 using ImageGear.Core;
 using ImageGear.Formats;
@@ -27,12 +25,12 @@ namespace PlaceImageOnAnExistingPDFPage
             ImGearPDF.Initialize();
 
             // Load a PDF document.
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 using (ImGearPDFDocument pdfDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream))
                 {
                     // Load a raster image.
-                    using (Stream imageFileStream = new FileStream(@"..\..\..\..\..\..\Sample Input\water.jpg", FileMode.Open, FileAccess.Read))
+                    using (Stream imageFileStream = new FileStream(@"../../../../../../Sample Input/water.jpg", FileMode.Open, FileAccess.Read))
                     {
                         ImGearPage loadedIgRasterPage = ImGearFileFormats.LoadPage(imageFileStream);
 
@@ -47,7 +45,7 @@ namespace PlaceImageOnAnExistingPDFPage
                     }
 
                     // Save the PDF document.
-                    using (Stream streamOut = new FileStream(@"..\..\..\..\..\..\Sample Output\PlaceImageOnAnExistingPDFPage.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
+                    using (Stream streamOut = new FileStream(@"../../../../../../Sample Output/PlaceImageOnAnExistingPDFPage.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
                         ImGearFileFormats.SaveDocument(pdfDocument, streamOut, 0, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.PDF, new ImGearSaveOptions());
                 }
             }

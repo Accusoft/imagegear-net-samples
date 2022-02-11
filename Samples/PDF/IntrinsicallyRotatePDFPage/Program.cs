@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using ImageGear.Core;
@@ -136,69 +134,65 @@ namespace IntrinsicallyRotatePDFPage
         }
 
         // Apply scaling and rotation (about the center of the page) to a page.
-        private static ImGearPDFDocument TransformPage(ImGearPDFDocument imGearPDFDocument, int pageNumber, double scalingRatio, double clockwiseRotation)
+        private static void TransformPage(ImGearPDFDocument imGearPDFDocument, int pageNumber, double scalingRatio, double clockwiseRotation)
         {
 
             // Get the page to scale and rotate.
-            using (ImGearPDFPage imGearPDFPage = (ImGearPDFPage)imGearPDFDocument.Pages[pageNumber])
+            ImGearPDFPage imGearPDFPage = (ImGearPDFPage)imGearPDFDocument.Pages[pageNumber];
+            
+            // Get the object dictionary for the page.
+            using (ImGearPDFBasDict pageDict = imGearPDFPage.GetDictionary())
             {
+                // the MediaBox array is [lower left X, lower left Y, upper right X, upper right Y].
+                ImGearPDFAtom mediaBoxKey = new ImGearPDFAtom("MediaBox");
+                ImGearPDFBasArray mediaBox = (ImGearPDFBasArray)pageDict.Get(mediaBoxKey);
+                double mediaBoxLowerLeftX = mediaBox.Get(0).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(0))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(0))).Value);
+                double mediaBoxLowerLeftY = mediaBox.Get(1).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(1))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(1))).Value);
+                double mediaBoxUpperRightX = mediaBox.Get(2).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(2))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(2))).Value);
+                double mediaBoxUpperRightY = mediaBox.Get(3).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(3))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(3))).Value);
 
-                // Get the object dictionary for the page.
-                using (ImGearPDFBasDict pageDict = imGearPDFPage.GetDictionary())
+                // Calculate the adjusted page width and height so it will fit on the page after being scaled and rotated.
+                double radiansRotation = Math.PI * clockwiseRotation / 180.0;
+                double scaledWidth = (mediaBoxUpperRightX - mediaBoxLowerLeftX) * scalingRatio;
+                double scaledHeight = (mediaBoxUpperRightY - mediaBoxLowerLeftY) * scalingRatio;
+                double newWidth = scaledWidth * Math.Abs(Math.Cos(radiansRotation)) + scaledHeight * Math.Abs(Math.Sin(radiansRotation));
+                double newHeight = scaledHeight * Math.Abs(Math.Cos(radiansRotation)) + scaledWidth * Math.Abs(Math.Sin(radiansRotation));
+
+                // Calculate the transform matrix to perform the scaling and rotation. Translate to and from origin to facilitate rotation about the origin.
+                ImGearPDFFixedMatrix transformMatrix = new ImGearPDFFixedMatrix 
+                { 
+                    A = ImGearPDF.DoubleToFixed(1.0), 
+                    D = ImGearPDF.DoubleToFixed(1.0)
+                };
+                transformMatrix = ConcatTranslation(transformMatrix, -(mediaBoxUpperRightX - mediaBoxLowerLeftX) / 2.0, -(mediaBoxUpperRightY - mediaBoxLowerLeftY) / 2.0);
+                transformMatrix = ConcatScaling(transformMatrix, scalingRatio);
+                transformMatrix = ConcatRotation(transformMatrix, radiansRotation);
+                transformMatrix = ConcatTranslation(transformMatrix, newWidth / 2.0, newHeight / 2.0);
+
+                // Apply the transform to the content of the page.
+                using (ImGearPDEContent content = imGearPDFPage.GetContent())
                 {
+                    List<int> transformedIDs = new List<int>();
+                    TransformPageContent(content, transformMatrix, transformedIDs);
+                    imGearPDFPage.SetContent();
+                }
+                imGearPDFPage.ReleaseContent();
 
-                    // the MediaBox array is [lower left X, lower left Y, upper right X, upper right Y].
-                    ImGearPDFAtom mediaBoxKey = new ImGearPDFAtom("MediaBox");
-                    ImGearPDFBasArray mediaBox = (ImGearPDFBasArray)pageDict.Get(mediaBoxKey);
-                    double mediaBoxLowerLeftX = mediaBox.Get(0).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(0))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(0))).Value);
-                    double mediaBoxLowerLeftY = mediaBox.Get(1).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(1))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(1))).Value);
-                    double mediaBoxUpperRightX = mediaBox.Get(2).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(2))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(2))).Value);
-                    double mediaBoxUpperRightY = mediaBox.Get(3).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(3))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(3))).Value);
+                // Update the MediaBox to the new size.
+                using (ImGearPDFBasArray newMediaBox = new ImGearPDFBasArray((ImGearPDFDocument)imGearPDFPage.Document, false, 4))
+                {
+                    newMediaBox.PutFixed(0, false, ImGearPDF.DoubleToFixed(0.0));
+                    newMediaBox.PutFixed(1, false, ImGearPDF.DoubleToFixed(0.0));
+                    newMediaBox.PutFixed(2, false, ImGearPDF.DoubleToFixed(newWidth));
+                    newMediaBox.PutFixed(3, false, ImGearPDF.DoubleToFixed(newHeight));
+                    pageDict.Put(mediaBoxKey, newMediaBox);
 
-                    // Calculate the adjusted page width and height so it will fit on the page after being scaled and rotated.
-                    double radiansRotation = Math.PI * clockwiseRotation / 180.0;
-                    double scaledWidth = (mediaBoxUpperRightX - mediaBoxLowerLeftX) * scalingRatio;
-                    double scaledHeight = (mediaBoxUpperRightY - mediaBoxLowerLeftY) * scalingRatio;
-                    double newWidth = scaledWidth * Math.Abs(Math.Cos(radiansRotation)) + scaledHeight * Math.Abs(Math.Sin(radiansRotation));
-                    double newHeight = scaledHeight * Math.Abs(Math.Cos(radiansRotation)) + scaledWidth * Math.Abs(Math.Sin(radiansRotation));
-
-                    // Calculate the transform matrix to perform the scaling and rotation. Translate to and from origin to facilitate rotation about the origin.
-                    ImGearPDFFixedMatrix transformMatrix = new ImGearPDFFixedMatrix 
-                    { 
-                        A = ImGearPDF.DoubleToFixed(1.0), 
-                        D = ImGearPDF.DoubleToFixed(1.0)
-                    };
-                    transformMatrix = ConcatTranslation(transformMatrix, -(mediaBoxUpperRightX - mediaBoxLowerLeftX) / 2.0, -(mediaBoxUpperRightY - mediaBoxLowerLeftY) / 2.0);
-                    transformMatrix = ConcatScaling(transformMatrix, scalingRatio);
-                    transformMatrix = ConcatRotation(transformMatrix, radiansRotation);
-                    transformMatrix = ConcatTranslation(transformMatrix, newWidth / 2.0, newHeight / 2.0);
-
-                    // Apply the transform to the content of the page.
-                    using (ImGearPDEContent content = imGearPDFPage.GetContent())
-                    {
-                        List<int> transformedIDs = new List<int>();
-                        TransformPageContent(content, transformMatrix, transformedIDs);
-                        imGearPDFPage.SetContent();
-                    }
-                    imGearPDFPage.ReleaseContent();
-
-                    // Update the MediaBox to the new size.
-                    using (ImGearPDFBasArray newMediaBox = new ImGearPDFBasArray((ImGearPDFDocument)imGearPDFPage.Document, false, 4))
-                    {
-                        newMediaBox.PutFixed(0, false, ImGearPDF.DoubleToFixed(0.0));
-                        newMediaBox.PutFixed(1, false, ImGearPDF.DoubleToFixed(0.0));
-                        newMediaBox.PutFixed(2, false, ImGearPDF.DoubleToFixed(newWidth));
-                        newMediaBox.PutFixed(3, false, ImGearPDF.DoubleToFixed(newHeight));
-                        pageDict.Put(mediaBoxKey, newMediaBox);
-
-                        // Remove the CropBox, if any.
-                        ImGearPDFAtom cropBoxKey = new ImGearPDFAtom("CropBox");
-                        if (pageDict.Known(cropBoxKey))
-                            pageDict.Remove(cropBoxKey);
-                    }
+                    // Remove the CropBox, if any.
+                    ImGearPDFAtom cropBoxKey = new ImGearPDFAtom("CropBox");
+                    if (pageDict.Known(cropBoxKey))
+                        pageDict.Remove(cropBoxKey);
                 }
             }
-            return imGearPDFDocument;
         }
 
         static void Main()
@@ -217,15 +211,16 @@ namespace IntrinsicallyRotatePDFPage
             ImGearPDF.Initialize();
 
             // Load PDF document.
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 using (ImGearDocument imGearDocument = ImGearFileFormats.LoadDocument(stream, 0, -1))
                 {
                     // Intrinsically scale and rotate the first page. Make the first page 50% smaller and rotate it clockwise 60 degrees
-                    ImGearPDFDocument imGearPDFDocument = TransformPage((ImGearPDFDocument)imGearDocument, 0, 0.5, 60.0);
+                    ImGearPDFDocument imGearPDFDocument = (ImGearPDFDocument)imGearDocument;
+                    TransformPage(imGearPDFDocument, 0, 0.5, 60.0);
 
                     // Save the PDF document.
-                    using (Stream outputStream = new FileStream(@"..\..\..\..\..\..\Sample Output\IntrinsicallyRotatePDFPage.pdf", FileMode.Create, FileAccess.Write))
+                    using (Stream outputStream = new FileStream(@"../../../../../../Sample Output/IntrinsicallyRotatePDFPage.pdf", FileMode.Create, FileAccess.Write))
                         imGearPDFDocument.Save(outputStream, ImGearSavingFormats.PDF, 0, 0, -1, ImGearSavingModes.OVERWRITE);
                 }
             }

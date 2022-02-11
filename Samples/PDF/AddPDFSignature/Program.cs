@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using System.Drawing;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
@@ -29,7 +27,7 @@ namespace AddPDFSignature
 
             // Load PDF document from file.
             ImGearPDFDocument pdfDocument;
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\accusoft-brochure.pdf", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/accusoft-brochure.pdf", FileMode.Open, FileAccess.Read, FileShare.None))
                 pdfDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream);
 
             // PDF document should be disposed in any case.
@@ -63,11 +61,11 @@ namespace AddPDFSignature
                 {
                     SignerName = "John Doe",
                     SigningReason = "I have read and agree to this document",
-                    Handler = new PKCS7SignatureHandler(@"..\..\..\..\..\..\Sample Input\SampleUserCertificate.pfx", "password")
+                    Handler = new PKCS7SignatureHandler(@"../../../../../../Sample Input/SampleUserCertificate.pfx", "password")
                 };
 
                 // Save the signed PDF document to a file. Document is signed during saving.
-                pdfDocument.Save(@"..\..\..\..\..\..\Sample Output\AddPDFSignature.pdf", ImGearSavingFormats.PDF, 0, 0, pdfDocument.Pages.Count, ImGearSavingModes.OVERWRITE);
+                pdfDocument.Save(@"../../../../../../Sample Output/AddPDFSignature.pdf", ImGearSavingFormats.PDF, 0, 0, pdfDocument.Pages.Count, ImGearSavingModes.OVERWRITE);
             }
 
             // Terminate PDF support once for each call to Initialize PDF support.

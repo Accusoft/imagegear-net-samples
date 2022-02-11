@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using ImageGear.Core;
@@ -50,7 +48,7 @@ namespace SaveAllImagesOnPDFPage
                         ImGearPage igPage = igPDEImage.ToImGearPage();
 
                         // Save image page.
-                        using (Stream outputStream = new FileStream(String.Format(@"..\..\..\..\..\..\Sample Output\SaveAllImagesOnPDFPage_{0}.png", imageIndex), FileMode.Create))
+                        using (Stream outputStream = new FileStream(String.Format(@"../../../../../../Sample Output/SaveAllImagesOnPDFPage_{0}.png", imageIndex), FileMode.Create))
                             ImGearFileFormats.SavePage(igPage, outputStream, 1, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.PNG);
                         imageIndex++;
                         break;
@@ -111,7 +109,7 @@ namespace SaveAllImagesOnPDFPage
             ImGearPDF.Initialize();
 
             // Load a PDF document.
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 using (ImGearPDFDocument igPDFDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream, 0, -1))
                 {

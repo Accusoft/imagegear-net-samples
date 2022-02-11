@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Evaluation;
 using ImageGear.Core;
 using ImageGear.Formats;
@@ -27,7 +25,7 @@ namespace CreatePDFFormField
             ImGearPDF.Initialize();
 
             // Load PDF document from a file.
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\accusoft-brochure.pdf", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/accusoft-brochure.pdf", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 using (ImGearPDFDocument pdfDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream))
                 {
@@ -66,7 +64,7 @@ namespace CreatePDFFormField
                     }
 
                     // Save the PDF document.
-                    using (Stream streamOut = new FileStream(@"..\..\..\..\..\..\Sample Output\CreatePDFFormField.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
+                    using (Stream streamOut = new FileStream(@"../../../../../../Sample Output/CreatePDFFormField.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
                         ImGearFileFormats.SaveDocument(pdfDocument, streamOut, 0, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.PDF, new ImGearSaveOptions());
                 }
             }

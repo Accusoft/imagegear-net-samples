@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
 using ImageGear.Formats.PDF;
@@ -28,13 +26,13 @@ namespace CompressPDFFile
             ImGearCompressOptions compressOptions = new ImGearCompressOptions();
 
             // Open file for PDF file reading.
-            using (FileStream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\compression-info.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream stream = new FileStream(@"../../../../../../Sample Input/compression-info.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
 
             // Load PDF document from a file.
             using (ImGearPDFDocument pdfDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream))
             {
                 // Save the PDF document with compression.
-                pdfDocument.SaveCompressed(@"..\..\..\..\..\..\Sample Output\CompressPDFFile.pdf");
+                pdfDocument.SaveCompressed(@"../../../../../../Sample Output/CompressPDFFile.pdf");
             }
 
             // Terminate PDF support once for each call to Initialize PDF support.

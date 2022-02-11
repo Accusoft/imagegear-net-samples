@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
 using ImageGear.Formats.PDF;
@@ -26,19 +24,19 @@ namespace MergeTwoPDFFiles
 
             // Load the first PDF document.
             ImGearPDFDocument imGearPDFDocument1 = null;
-            using (FileStream stream1 = new FileStream(@"..\..\..\..\..\..\Sample Input\multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream stream1 = new FileStream(@"../../../../../../Sample Input/multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
                 imGearPDFDocument1 = ImGearFileFormats.LoadDocument(stream1) as ImGearPDFDocument;
 
             // Load the second PDF document.
             ImGearPDFDocument imGearPDFDocument2 = null;
-            using (FileStream stream2 = new FileStream(@"..\..\..\..\..\..\Sample Input\samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream stream2 = new FileStream(@"../../../../../../Sample Input/samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
                 imGearPDFDocument2 = ImGearFileFormats.LoadDocument(stream2) as ImGearPDFDocument;
 
             // Copy all pages from the second document to the first one.
             imGearPDFDocument1.InsertPages((int)ImGearPDFPageNumber.LAST_PAGE, imGearPDFDocument2, 0, (int)ImGearPDFPageRange.ALL_PAGES, ImGearPDFInsertFlags.ALL);
 
             // Save the PDF document.
-            using (FileStream outputStream = new FileStream(@"..\..\..\..\..\..\Sample Output\MergeTwoPDFFiles.pdf", FileMode.Create))
+            using (FileStream outputStream = new FileStream(@"../../../../../../Sample Output/MergeTwoPDFFiles.pdf", FileMode.Create))
                 imGearPDFDocument1.Save(outputStream, ImGearSavingFormats.PDF, 0, 0, -1, ImGearSavingModes.OVERWRITE);
 
             // Dispose of the PDF documents

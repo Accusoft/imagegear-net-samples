@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Core;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
@@ -20,11 +18,11 @@ namespace ConvertRasterImageFormat
 
             // Load PNG image.
             ImGearPage imGearPage;
-            using (FileStream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\single-page.png", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream stream = new FileStream(@"../../../../../../Sample Input/single-page.png", FileMode.Open, FileAccess.Read, FileShare.Read))
                 imGearPage = ImGearFileFormats.LoadPage(stream, 0);
 
             // Save image as JPG.
-            using (FileStream outputStream = new FileStream(@"..\..\..\..\..\..\Sample Output\ConvertRasterImageFormat.jpg", FileMode.Create))
+            using (FileStream outputStream = new FileStream(@"../../../../../../Sample Output/ConvertRasterImageFormat.jpg", FileMode.Create))
                 ImGearFileFormats.SavePage(imGearPage, outputStream, 1, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.JPG, new ImGearSaveOptions());
         }
     }

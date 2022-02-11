@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System;
+﻿using System;
 using System.IO;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
@@ -26,7 +24,7 @@ namespace PDFContentExtractText
             ImGearPDF.Initialize();
 
             // Load a PDF document.
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 using (ImGearPDFDocument imGearPDFDocument = ImGearFileFormats.LoadDocument(stream) as ImGearPDFDocument)
                 {

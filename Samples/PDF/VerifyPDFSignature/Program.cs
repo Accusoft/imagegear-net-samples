@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System;
+﻿using System;
 using System.IO;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
@@ -29,11 +27,11 @@ namespace VerifyPDFSignature
             // Trust any user-specified certificates (DER or PEM format) to verify a signer's
             // identity when signing. If the certificate used to sign the PDF is not trusted,
             // an error will occur upon verification.
-            ImGearPDF.TrustedCertificates.Import(@"..\..\..\..\..\..\Sample Input\SampleTrustedCertificate.der");
+            ImGearPDF.TrustedCertificates.Import(@"../../../../../../Sample Input/SampleTrustedCertificate.der");
 
             // Load a signed PDF document.
             ImGearPDFDocument pdfDocument;
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\accusoft-brochure-signed.pdf", FileMode.Open, FileAccess.Read))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/accusoft-brochure-signed.pdf", FileMode.Open, FileAccess.Read))
                 pdfDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream);
 
             // Verify all signatures in the document at once.

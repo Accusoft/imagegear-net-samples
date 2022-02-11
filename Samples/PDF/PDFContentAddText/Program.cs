@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
 using ImageGear.Formats.PDF;
@@ -70,7 +68,7 @@ namespace PDFContentAddText
             textElement.Add(ImGearPDETextFlags.RUN, 0, textToAdd, font, gState, null, textMatrix, null);
 
             // Load a PDF document.
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 using (ImGearPDFDocument imGearPDFDocument = ImGearFileFormats.LoadDocument(stream) as ImGearPDFDocument)
                 {
@@ -90,7 +88,7 @@ namespace PDFContentAddText
                     }
 
                     // Save the PDF document.
-                    using (Stream outputStream = new FileStream(@"..\..\..\..\..\..\Sample Output\PDFContentAddText.pdf", FileMode.Create))
+                    using (Stream outputStream = new FileStream(@"../../../../../../Sample Output/PDFContentAddText.pdf", FileMode.Create))
                         ImGearFileFormats.SaveDocument(imGearPDFDocument, outputStream, 1, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.PDF, new ImGearSaveOptions());
                 }
             }

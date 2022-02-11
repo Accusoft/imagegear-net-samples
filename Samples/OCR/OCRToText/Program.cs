@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System.IO;
+﻿using System.IO;
 using ImageGear.Core;
 using ImageGear.Evaluation;
 using ImageGear.Formats;
@@ -21,7 +19,7 @@ namespace OCRToText
 
             // Load raster page from a file.
             ImGearRasterPage rasterPage;
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\MRCExampleFlyer.png", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/MRCExampleFlyer.png", FileMode.Open, FileAccess.Read, FileShare.Read))
                 rasterPage = (ImGearRasterPage)ImGearFileFormats.LoadPage(stream);
 
             // Create OCR engine.
@@ -37,7 +35,7 @@ namespace OCRToText
                     ocrPage.Recognize();
 
                     // Save recognition results as a text file
-                    File.WriteAllText(@"..\..\..\..\..\..\Sample Output\OCRToText.txt", ocrPage.Text);
+                    File.WriteAllText(@"../../../../../../Sample Output/OCRToText.txt", ocrPage.Text);
                 }
             }
         }

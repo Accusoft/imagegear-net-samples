@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System;
+﻿using System;
 using System.IO;
 using ImageGear.Core;
 using ImageGear.Evaluation;
@@ -22,7 +20,7 @@ namespace OCRUsingLanguage
 
             // Load raster page from a file.
             ImGearRasterPage rasterPage;
-            using (Stream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\OCRLanguageSelectionDemo.png", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../Sample Input/OCRLanguageSelectionDemo.png", FileMode.Open, FileAccess.Read, FileShare.Read))
                 rasterPage = (ImGearRasterPage)ImGearFileFormats.LoadPage(stream);
 
             // Create OCR engine for recognition.
@@ -44,7 +42,7 @@ namespace OCRUsingLanguage
                     ocrPage.Recognize();
 
                     // Save recognition results to a text file.
-                    File.WriteAllText(@"..\..\..\..\..\..\Sample Output\OCRUsingLanguage.txt", ocrPage.Text);
+                    File.WriteAllText(@"../../../../../../Sample Output/OCRUsingLanguage.txt", ocrPage.Text);
                 }
             }
         }

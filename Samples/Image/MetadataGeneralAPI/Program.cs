@@ -1,6 +1,4 @@
-﻿// Copyright Accusoft Corporation
-
-using System;
+﻿using System;
 using System.IO;
 using System.Text;
 using ImageGear.Core;
@@ -56,7 +54,7 @@ namespace MetadataGeneralAPI
 
             // Load image page.
             ImGearPage imGearPage;
-            using (FileStream stream = new FileStream(@"..\..\..\..\..\..\Sample Input\Bitonal-Cleanup-Sample.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream stream = new FileStream(@"../../../../../../Sample Input/Bitonal-Cleanup-Sample.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
                 imGearPage = ImGearFileFormats.LoadPage(stream, 0);
 
             // Collect image metadata into a StringBuilder.
