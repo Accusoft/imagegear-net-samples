@@ -9,10 +9,6 @@ namespace DeletePDFPage
     {
         static void Main()
         {
-
-            // Initialize evaluation license.
-            ImGearEvaluationManager.Initialize();
-
             // Initialize common formats.
             ImGearCommonFormats.Initialize();
 
@@ -23,7 +19,7 @@ namespace DeletePDFPage
             ImGearPDF.Initialize();
 
             // Load a PDF document.
-            using (Stream stream = new FileStream(@"../../../../../../Sample Input/multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../../Sample Input/multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 using (ImGearPDFDocument igPDFDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream, 0, -1))
                 {
@@ -31,7 +27,7 @@ namespace DeletePDFPage
                     igPDFDocument.Pages.RemoveAt(0);
 
                     // Save the PDF document.
-                    using (Stream outputStream = new FileStream(@"../../../../../../Sample Output/DeletePDFPage.pdf", FileMode.Create, FileAccess.Write))
+                    using (Stream outputStream = new FileStream(@"../../../../../../../Sample Output/DeletePDFPage.pdf", FileMode.Create, FileAccess.Write))
                         igPDFDocument.Save(outputStream, ImGearSavingFormats.PDF, 0, 0, -1, ImGearSavingModes.OVERWRITE);
                 }
             }

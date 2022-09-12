@@ -10,10 +10,6 @@ namespace PDFContentExtractText
     {
         static void Main()
         {
-
-            // Initialize evaluation license.
-            ImGearEvaluationManager.Initialize();
-
             // Initialize common formats.
             ImGearCommonFormats.Initialize();
 
@@ -24,7 +20,7 @@ namespace PDFContentExtractText
             ImGearPDF.Initialize();
 
             // Load a PDF document.
-            using (Stream stream = new FileStream(@"../../../../../../Sample Input/multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../../Sample Input/multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 using (ImGearPDFDocument imGearPDFDocument = ImGearFileFormats.LoadDocument(stream) as ImGearPDFDocument)
                 {

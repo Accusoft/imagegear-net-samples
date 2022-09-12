@@ -4,7 +4,9 @@ These samples are intended to demonstrate how the various functions of ImageGear
 
 ## How to Build these Samples
 
-All samples can be built using Microsoft Visual Studio 2017 or later. To build all the samples, use Visual Studio to open the samples.sln file in this directory. To build any individual sample, use Visual Studio to open the .sln file in the individual project directory. After opening the solution, select a Solution Configuration (Debug or Release) and a Solution Platform (x64 or x86). Last, build the complete solution with Build Solution located in the Build menu.
+All samples can be built using Microsoft Visual Studio 2022 or later. To build all the samples, use Visual Studio to open the samples.sln file in this directory. To build any individual sample, use Visual Studio to open the .sln file in the individual project directory. After opening the solution, select a Solution Configuration (Debug or Release) and a Solution Platform (x64 or x86). Last, build the complete solution with Build Solution located in the Build menu.
+
+For samples using the Accusoft.ImageGear.Office NuGet package, make sure to specify the path to your local LibreOffice installation as a parameter in the call to the ImGearOffice.Initialize() function.
 
 ## How to Run these Samples
 
@@ -12,7 +14,7 @@ When the solution is built, it produces one or more console application executab
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear-Net/latest/Windows/HTML/webframe.html#System_Requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
 
 ## Imaging Support in ImageGear .NET
 
@@ -30,12 +32,14 @@ ImageGear .NET supports the most commonly used image, graphic, and document form
 | [***Image Processing Samples***](Samples/Image%20Processing) | | These samples demonstrate select image processing capabilities of ImageGear .NET. |
 | | [CropAndResizeRasterImage](Samples/Image%20Processing/CropAndResizeRasterImage) | Once an image is loaded into ImageGear, it can be cropped. ImageGear crops independently on each side of the image, giving you complete control over what portion of the image to remove. |
 | | [DespeckleAndDeskewRasterImage](Samples/Image%20Processing/DespeckleAndDeskewRasterImage) | After an image is scanned, it is often slightly skewed, and can also contain "noise" in the background portion of the image. These can cause OCR to perform poorly. To correct these issues, load a raster image into ImageGear and use the Despeckle and Deskew functions to "fix" the image. |
-| [***OCR Samples***](Samples/OCR) | | These samples demonstrate the OCR functionality in ImageGear .NET. |
-| | [OCRUsingDictionary](Samples/OCR/OCRUsingDictionary) | A dictionary can be initialized from a text file as shown by this sample. |
-| | [OCRUsingLanguage](Samples/OCR/OCRUsingLanguage) | In order to best OCR the contents of a page, ImageGear can set the OCR language to improve recognition accuracy. |
-| | [OCRUsingZones](Samples/OCR/OCRUsingZones) | Before recognizing text, zones may be specified. If zones are specified, then the text recognized in each zone is provided separately. |
-| | [OCRToPDF](Samples/OCR/OCRToPDF) | After ImageGear has recognized an imported raster image, it can then be used to create a PDF page as well as getting the recognized text. |
-| | [OCRToText](Samples/OCR/OCRToText) |By extracting the text, the contents of the image can be used to control workflow without modifing the source image. |
+| [***Email Samples***](Samples/Email) | | These samples demonstrate general Email functionality in ImageGear .NET. |
+| | [EmailFileToPDFFile](Samples/Email/EmailFileToPDFFile) | This sample demonstrates how to load an Email document into ImageGear and save the document as a PDF. |
+| | [EmailFileToRasterFormat](Samples/Email/EmailFileToRasterFormat) | After an Email document is loaded, ImageGear can rasterize the entire document and save it as a single-page raster format. |
+| | [ExtractEmailAttachments](Samples/Email/ExtractEmailAttachments) | ImageGear provides functionality to extract attachments from the Email document. |
+| [***Office Samples***](Samples/Office) | | These samples demonstrate general Office functionality in ImageGear .NET. |
+| | [OfficeFileToPDFFile](Samples/Office/OfficeFileToPDFFile) | This sample demonstrates how to load an Office document into ImageGear and save the document as a PDF. |
+| | [OfficeFileToRasterFormat](Samples/Office/OfficeFileToRasterFormat) | After an Office document is loaded, ImageGear can rasterize individual pages or the entire document and save them to raster formats. |
+| | [ReadOfficeMetadata](Samples/Office/ReadOfficeMetadata) | ImageGear provides functionality to access metadata from the Office document. |
 | [***PDF Acroform Samples***](Samples/PDF%20Acroform) | | These samples demonstrate PDF Acroform support in ImageGear .NET. |
 | | [CreatePDFFormField](Samples/PDF%20Acroform/CreatePDFFormField) | Starting with a PDF document, new or existing, first the PDF document is set to contain forms. Then form controls can be added to any page in the PDF document. |
 | [***PDF Compression Samples***](Samples/PDF%20Compression) | | These samples demonstrate how to compress PDF file content using ImageGear .NET. |
@@ -54,5 +58,3 @@ ImageGear .NET supports the most commonly used image, graphic, and document form
 | | [PDFFileToMultipageTIFF](Samples/PDF/PDFFileToMultipageTIFF) | Converting a PDF file to a raster image format is very easy with ImageGear. |
 | | [SaveAllImagesOnPDFPage](Samples/PDF/SaveAllImagesOnPDFPage) | After a PDF page is loaded, the objects on the page can be traversed. |
 | | [SetPDFSecurity](Samples/PDF/SetPDFSecurity) | ImageGear can set the security on a PDF document using the SetNewCryptHandler and SetNewSecurityData functions. |
-| | [VerifyPDFSignature](Samples/PDF/VerifyPDFSignature) | After providing certificates to ImageGear, all the signatures in a PDF document can be verified at once with the VerifySignatures function. |
-| | [AddPDFSignature](Samples/PDF/AddPDFSignature) | After a PDF document is set to contain forms using the CreateForm function, a signature field can be created that will provide a digital signature. |

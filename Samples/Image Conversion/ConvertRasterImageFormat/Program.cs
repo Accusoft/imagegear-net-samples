@@ -9,10 +9,6 @@ namespace ConvertRasterImageFormat
     {
         static void Main()
         {
-
-            // Initialize evaluation license.
-            ImGearEvaluationManager.Initialize();
-
             // Initialize common formats.
             ImGearCommonFormats.Initialize();
 

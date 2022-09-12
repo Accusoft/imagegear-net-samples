@@ -41,11 +41,3 @@ After a PDF page is loaded, the objects on the page can be traversed.
 ## SetPDFSecurity
 
 ImageGear can set the security on a PDF document using the SetNewCryptHandler and SetNewSecurityData functions.
-
-## VerifyPDFSignature
-
-After providing certificates to ImageGear, all the signatures in a PDF document can be verified at once with the VerifySignatures function.
-
-## AddPDFSignature
-
-After a PDF document is set to contain forms using the CreateForm function, a signature field can be created that will provide a digital signature.

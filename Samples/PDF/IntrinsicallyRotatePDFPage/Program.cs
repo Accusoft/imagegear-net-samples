@@ -106,12 +106,6 @@ namespace IntrinsicallyRotatePDFPage
                         for (int i = 0; i < pdeText.RunsCount; ++i)
                             pdeText.RunSetMatrix(i, Concat(pdeText.GetMatrix(ImGearPDETextFlags.RUN, i), transformMatrix));
                         break;
-                    case ImGearPDEType.FORM:
-                        ImGearPDEForm pdeForm = (ImGearPDEForm)pdeElement;
-                        pdeForm.SetMatrix(Concat(pdeForm.GetMatrix(), transformMatrix));
-                        using (ImGearPDEContent moreContent = pdeForm.GetContent())
-                            TransformPageContent(moreContent, transformMatrix, transformedIDs);
-                        break;
                     default:
                         pdeElement.SetMatrix(Concat(pdeElement.GetMatrix(), transformMatrix));
                         break;
@@ -146,10 +140,11 @@ namespace IntrinsicallyRotatePDFPage
                 // the MediaBox array is [lower left X, lower left Y, upper right X, upper right Y].
                 ImGearPDFAtom mediaBoxKey = new ImGearPDFAtom("MediaBox");
                 ImGearPDFBasArray mediaBox = (ImGearPDFBasArray)pageDict.Get(mediaBoxKey);
-                double mediaBoxLowerLeftX = mediaBox.Get(0).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(0))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(0))).Value);
-                double mediaBoxLowerLeftY = mediaBox.Get(1).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(1))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(1))).Value);
-                double mediaBoxUpperRightX = mediaBox.Get(2).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(2))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(2))).Value);
-                double mediaBoxUpperRightY = mediaBox.Get(3).Type == ImGearPDFBasicType.INTEGER ? ((ImGearPDFBasInt)(mediaBox.Get(3))).Value : ImGearPDF.FixedToDouble(((ImGearPDFBasFixed)(mediaBox.Get(3))).Value);
+
+                double mediaBoxLowerLeftX = ImGearPDF.NumericToDouble(mediaBox.Get(0));
+                double mediaBoxLowerLeftY = ImGearPDF.NumericToDouble(mediaBox.Get(1));
+                double mediaBoxUpperRightX = ImGearPDF.NumericToDouble(mediaBox.Get(2));
+                double mediaBoxUpperRightY = ImGearPDF.NumericToDouble(mediaBox.Get(3));
 
                 // Calculate the adjusted page width and height so it will fit on the page after being scaled and rotated.
                 double radiansRotation = Math.PI * clockwiseRotation / 180.0;
@@ -197,10 +192,6 @@ namespace IntrinsicallyRotatePDFPage
 
         static void Main()
         {
-
-            // Initialize evaluation license.
-            ImGearEvaluationManager.Initialize();
-
             // Initialize common formats.
             ImGearCommonFormats.Initialize();
 
@@ -211,7 +202,7 @@ namespace IntrinsicallyRotatePDFPage
             ImGearPDF.Initialize();
 
             // Load PDF document.
-            using (Stream stream = new FileStream(@"../../../../../../Sample Input/samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../../Sample Input/samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 using (ImGearDocument imGearDocument = ImGearFileFormats.LoadDocument(stream, 0, -1))
                 {
@@ -220,7 +211,7 @@ namespace IntrinsicallyRotatePDFPage
                     TransformPage(imGearPDFDocument, 0, 0.5, 60.0);
 
                     // Save the PDF document.
-                    using (Stream outputStream = new FileStream(@"../../../../../../Sample Output/IntrinsicallyRotatePDFPage.pdf", FileMode.Create, FileAccess.Write))
+                    using (Stream outputStream = new FileStream(@"../../../../../../../Sample Output/IntrinsicallyRotatePDFPage.pdf", FileMode.Create, FileAccess.Write))
                         imGearPDFDocument.Save(outputStream, ImGearSavingFormats.PDF, 0, 0, -1, ImGearSavingModes.OVERWRITE);
                 }
             }

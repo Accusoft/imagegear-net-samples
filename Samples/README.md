@@ -14,10 +14,6 @@ These samples demonstrate how to convert between raster image formats using Imag
 
 These samples demonstrate select image processing capabilities of ImageGear .NET.
 
-## OCR Samples
-
-These samples demonstrate the OCR functionality in ImageGear .NET.
-
 ## General PDF Samples
 
 These samples demonstrate general PDF functionality in ImageGear .NET
@@ -33,3 +29,7 @@ These samples demonstrate both PDF and JPEG functionality combined into single s
 ## PDF Compression Samples
 
 These samples demonstrate how to compress PDF file content using ImageGear .NET.
+
+## Email Conversion Samples
+
+These samples demonstrate how to convert an Email document to PDF, extract attachments, and raster image formats using ImageGear .NET.

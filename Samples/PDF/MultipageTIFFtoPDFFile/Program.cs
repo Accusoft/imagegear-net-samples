@@ -10,10 +10,6 @@ namespace MultipageTIFFtoPDFFile
     {
         static void Main()
         {
-
-            // Initialize evaluation license.
-            ImGearEvaluationManager.Initialize();
-
             // Initialize common formats.
             ImGearCommonFormats.Initialize();
 
@@ -25,7 +21,7 @@ namespace MultipageTIFFtoPDFFile
 
             // Load a multi-page TIFF document.
             ImGearDocument imGearDocument = null;
-            using (FileStream stream = new FileStream(@"../../../../../../Sample Input/multi-page-depth-24.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream stream = new FileStream(@"../../../../../../../Sample Input/multi-page-depth-24.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
                 imGearDocument = ImGearFileFormats.LoadDocument(stream, 0, -1);
 
             // Create a PDF document.
@@ -46,7 +42,7 @@ namespace MultipageTIFFtoPDFFile
             }
 
             // Save the PDF document.
-            using (FileStream outputStream = new FileStream(@"../../../../../../Sample Output/MultipageTIFFtoPDFFile.pdf", FileMode.Create))
+            using (FileStream outputStream = new FileStream(@"../../../../../../../Sample Output/MultipageTIFFtoPDFFile.pdf", FileMode.Create))
                 pdfDocument.Save(outputStream, ImGearSavingFormats.PDF, 0, 0, -1, ImGearSavingModes.OVERWRITE);
                 
             // Dispose the document

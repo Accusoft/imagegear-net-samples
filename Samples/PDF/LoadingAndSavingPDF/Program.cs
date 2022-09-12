@@ -9,10 +9,6 @@ namespace LoadingAndSavingPDF
     {
         static void Main()
         {
-
-            // Initialize evaluation license.
-            ImGearEvaluationManager.Initialize();
-
             // Initialize common formats.
             ImGearCommonFormats.Initialize();
 
@@ -23,13 +19,13 @@ namespace LoadingAndSavingPDF
             ImGearPDF.Initialize();
 
             // Load a PDF document.
-            using (Stream stream = new FileStream(@"../../../../../../Sample Input/samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../../Sample Input/samplepdf.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 using (ImGearPDFDocument imGearPDFDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream, 0, -1))
                 {
 
                     // Save the PDF document.
-                    using (Stream outputStream = new FileStream(@"../../../../../../Sample Output/LoadingAndSavingPDF.pdf", FileMode.Create, FileAccess.Write))
+                    using (Stream outputStream = new FileStream(@"../../../../../../../Sample Output/LoadingAndSavingPDF.pdf", FileMode.Create, FileAccess.Write))
                         imGearPDFDocument.Save(outputStream, ImGearSavingFormats.PDF, 0, 0, -1, ImGearSavingModes.OVERWRITE);
                 }
             }

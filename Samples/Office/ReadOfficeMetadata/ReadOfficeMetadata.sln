@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadOfficeMetadata", "ReadOfficeMetadata.csproj", "{33944F11-621A-42E2-8558-CB8D6F8CC163}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33944F11-621A-42E2-8558-CB8D6F8CC163}.Debug|x64.ActiveCfg = Debug|x64
+		{33944F11-621A-42E2-8558-CB8D6F8CC163}.Debug|x64.Build.0 = Debug|x64
+		{33944F11-621A-42E2-8558-CB8D6F8CC163}.Debug|x86.ActiveCfg = Debug|x86
+		{33944F11-621A-42E2-8558-CB8D6F8CC163}.Debug|x86.Build.0 = Debug|x86
+		{33944F11-621A-42E2-8558-CB8D6F8CC163}.Release|x64.ActiveCfg = Release|x64
+		{33944F11-621A-42E2-8558-CB8D6F8CC163}.Release|x64.Build.0 = Release|x64
+		{33944F11-621A-42E2-8558-CB8D6F8CC163}.Release|x86.ActiveCfg = Release|x86
+		{33944F11-621A-42E2-8558-CB8D6F8CC163}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E67B039-B038-41A1-9C47-BD4B23A5EE08}
+	EndGlobalSection
+EndGlobal

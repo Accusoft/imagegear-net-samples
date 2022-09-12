@@ -9,10 +9,6 @@ namespace SetPDFSecurity
     {
         static void Main()
         {
-
-            // Initialize evaluation license.
-            ImGearEvaluationManager.Initialize();
-
             // Initialize common formats.
             ImGearCommonFormats.Initialize();
 
@@ -23,7 +19,7 @@ namespace SetPDFSecurity
             ImGearPDF.Initialize();
 
             // Read PDF document from file.
-            using (Stream stream = new FileStream(@"../../../../../../Sample Input/accusoft-brochure.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (Stream stream = new FileStream(@"../../../../../../../Sample Input/accusoft-brochure.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
             {
                 using (ImGearPDFDocument pdfDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream))
                 {
@@ -57,7 +53,7 @@ namespace SetPDFSecurity
                     pdfDocument.SetNewSecurityData(securityData);
 
                     // Save the PDF document with new permissions.
-                    using (Stream outputStream = new FileStream(@"../../../../../../Sample Output/SetPDFSecurity.pdf", FileMode.Create))
+                    using (Stream outputStream = new FileStream(@"../../../../../../../Sample Output/SetPDFSecurity.pdf", FileMode.Create))
                         pdfDocument.Save(outputStream, ImGearSavingFormats.PDF, 0, 0, (int)ImGearPDFPageRange.ALL_PAGES, ImGearSavingModes.OVERWRITE);
                 }
             }

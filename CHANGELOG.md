@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2022-09-09
+
+- Added Email and Office document samples
+- Added solutions, projects, and support for ImageGear v26.1
+
 ## 2022-02-11
 
 - Added solutions, projects, and support for ImageGear v26.0

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32505.426
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeFileToPDFFile", "OfficeFileToPDFFile.csproj", "{CE96BE7A-7B1E-4D92-B09C-A0DD28D4D5A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE96BE7A-7B1E-4D92-B09C-A0DD28D4D5A9}.Debug|x64.ActiveCfg = Debug|x64
+		{CE96BE7A-7B1E-4D92-B09C-A0DD28D4D5A9}.Debug|x64.Build.0 = Debug|x64
+		{CE96BE7A-7B1E-4D92-B09C-A0DD28D4D5A9}.Debug|x86.ActiveCfg = Debug|x86
+		{CE96BE7A-7B1E-4D92-B09C-A0DD28D4D5A9}.Debug|x86.Build.0 = Debug|x86
+		{CE96BE7A-7B1E-4D92-B09C-A0DD28D4D5A9}.Release|x64.ActiveCfg = Release|x64
+		{CE96BE7A-7B1E-4D92-B09C-A0DD28D4D5A9}.Release|x64.Build.0 = Release|x64
+		{CE96BE7A-7B1E-4D92-B09C-A0DD28D4D5A9}.Release|x86.ActiveCfg = Release|x86
+		{CE96BE7A-7B1E-4D92-B09C-A0DD28D4D5A9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36C2EA1E-C679-4F2A-B306-16A96483FC30}
+	EndGlobalSection
+EndGlobal

@@ -9,10 +9,6 @@ namespace CompressPDFFile
     {
         static void Main()
         {
-
-            // Initialize evaluation license.
-            ImGearEvaluationManager.Initialize();
-
             // Initialize common formats.
             ImGearCommonFormats.Initialize();
 
@@ -26,13 +22,13 @@ namespace CompressPDFFile
             ImGearCompressOptions compressOptions = new ImGearCompressOptions();
 
             // Open file for PDF file reading.
-            using (FileStream stream = new FileStream(@"../../../../../../Sample Input/compression-info.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream stream = new FileStream(@"../../../../../../../Sample Input/compression-info.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
 
             // Load PDF document from a file.
             using (ImGearPDFDocument pdfDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream))
             {
                 // Save the PDF document with compression.
-                pdfDocument.SaveCompressed(@"../../../../../../Sample Output/CompressPDFFile.pdf");
+                pdfDocument.SaveCompressed(@"../../../../../../../Sample Output/CompressPDFFile.pdf");
             }
 
             // Terminate PDF support once for each call to Initialize PDF support.

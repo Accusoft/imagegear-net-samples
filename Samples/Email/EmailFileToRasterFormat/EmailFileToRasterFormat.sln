@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32505.426
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailFileToRasterFormat", "EmailFileToRasterFormat.csproj", "{D43C96F7-9225-4EC3-9883-859EBD6C686A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D43C96F7-9225-4EC3-9883-859EBD6C686A}.Debug|x64.ActiveCfg = Debug|x64
+		{D43C96F7-9225-4EC3-9883-859EBD6C686A}.Debug|x64.Build.0 = Debug|x64
+		{D43C96F7-9225-4EC3-9883-859EBD6C686A}.Release|x64.ActiveCfg = Release|x64
+		{D43C96F7-9225-4EC3-9883-859EBD6C686A}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50A6D954-B6CE-49EA-B1DD-8660594E6101}
+	EndGlobalSection
+EndGlobal

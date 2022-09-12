@@ -11,10 +11,6 @@ namespace AddImageToPDFAsAPage
     {
         static void Main()
         {
-
-            // Initialize evaluation license.
-            ImGearEvaluationManager.Initialize();
-
             // Initialize common formats.
             ImGearCommonFormats.Initialize();
 
@@ -25,7 +21,7 @@ namespace AddImageToPDFAsAPage
             ImGearPDF.Initialize();
 
             // Load PDF document from a file.
-            using (Stream stream = new FileStream(@"../../../../../../Sample Input/multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (Stream stream = new FileStream(@"../../../../../../../Sample Input/multi-page.pdf", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 using (ImGearPDFDocument pdfDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream))
                 {
@@ -49,7 +45,7 @@ namespace AddImageToPDFAsAPage
                     {
 
                         // Load a raster image.
-                        using (FileStream imageFileStream = new FileStream(@"../../../../../../Sample Input/water.jpg", FileMode.Open, FileAccess.Read))
+                        using (FileStream imageFileStream = new FileStream(@"../../../../../../../Sample Input/water.jpg", FileMode.Open, FileAccess.Read))
                         {
                             ImGearPage imGearPage = ImGearFileFormats.LoadPage(imageFileStream);
 
@@ -59,7 +55,7 @@ namespace AddImageToPDFAsAPage
                     }
 
                     // Save the PDF document.
-                    using (Stream streamOut = new FileStream(@"../../../../../../Sample Output/AddImageToPDFAsAPage.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
+                    using (Stream streamOut = new FileStream(@"../../../../../../../Sample Output/AddImageToPDFAsAPage.pdf", FileMode.Create, FileAccess.Write, FileShare.None))
                         ImGearFileFormats.SaveDocument(pdfDocument, streamOut, 0, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.PDF, new ImGearSaveOptions());
                 }
             }
