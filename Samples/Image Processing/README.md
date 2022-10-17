@@ -9,3 +9,7 @@ Once an image is loaded into ImageGear, it can be cropped. ImageGear crops indep
 ## DespeckleAndDeskewRasterImage
 
 After an image is scanned, it is often slightly skewed, and can also contain "noise" in the background portion of the image. These can cause OCR to perform poorly. To correct these issues, load a raster image into ImageGear and use the Despeckle and Deskew functions to "fix" the image.
+
+## ImageCleanup
+
+After a document is scanned, there can be undesirable artifacts on the image. Use the various image cleanup operations, such as `RemovePunchHoles` and `CleanBorders`, to clean up the image to make it suitable for further processing.

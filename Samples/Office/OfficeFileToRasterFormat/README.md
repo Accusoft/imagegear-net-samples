@@ -18,10 +18,7 @@ All samples can be built using Microsoft Visual Studio 2022. To build this sampl
 
 Samples using the Accusoft.ImageGear.Office NuGet package must specify a full path to a local LibreOffice installation as a parameter to the ImGearOffice.Initialize() function. LibreOffice must be version 7.0 or later.
 
-To build this sample under Linux, first install the Microsoft .NET SDK for your Linux distribution. After that, perform these steps:
-
-- Build the sample using `dotnet build OfficeFileToRasterFormat.sln`. By default this will build the Debug Solution Configuration.
-- For samples using the Accusoft.ImageGear.Pdf NuGet package, make sure the native portion of the ImageGear components is on the library search path. This additional search path can be temporarily defined by using the LD_LIBRARY_PATH environment variable. The native libraries can be found in the "bin/x64/Debug/net6.0/runtimes/linux-x64/native" under the build configuration directory.
+To build this sample under Linux, first install the Microsoft .NET SDK for your Linux distribution. After that, run `dotnet build OfficeFileToRasterFormat.sln`. By default this will build the Debug Solution Configuration.
 
 ## Running the Sample
 

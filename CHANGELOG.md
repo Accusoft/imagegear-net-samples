@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2022-09-21
+
+- Added multi-page raster image to SVG sample
+
+## 2022-09-19
+
+- Added image cleanup sample
+
 ## 2022-09-09
 
 - Added Email and Office document samples

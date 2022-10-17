@@ -51,7 +51,7 @@ namespace MetadataGeneralAPI
 
             // Load image page.
             ImGearPage imGearPage;
-            using (FileStream stream = new FileStream(@"../../../../../../Sample Input/Bitonal-Cleanup-Sample.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream stream = new FileStream(@"../../../../../../Sample Input/single-page.png", FileMode.Open, FileAccess.Read, FileShare.Read))
                 imGearPage = ImGearFileFormats.LoadPage(stream, 0);
 
             // Collect image metadata into a StringBuilder.
