@@ -2,7 +2,6 @@
 using System.IO;
 using System.Text;
 using ImageGear.Core;
-using ImageGear.Evaluation;
 using ImageGear.Formats;
 
 namespace MetadataGeneralAPI

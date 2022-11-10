@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using ImageGear.Core;
-using ImageGear.Evaluation;
 using ImageGear.Formats;
 
 namespace ConvertRasterImageFormat

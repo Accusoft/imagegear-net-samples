@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using ImageGear.Evaluation;
 using ImageGear.Core;
 using ImageGear.Formats;
 

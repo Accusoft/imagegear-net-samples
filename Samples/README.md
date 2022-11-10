@@ -33,3 +33,7 @@ These samples demonstrate how to compress PDF file content using ImageGear .NET.
 ## Email Conversion Samples
 
 These samples demonstrate how to convert an Email document to PDF, extract attachments, and raster image formats using ImageGear .NET.
+
+## PDF XFA Samples
+
+These samples demonstrate PDF XFA support in ImageGear .NET.

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlattenPDFFormFields", "FlattenPDFFormFields.csproj", "{9A034C97-9E3D-45D1-9C2F-B883A14AFCD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A034C97-9E3D-45D1-9C2F-B883A14AFCD9}.Debug|x64.ActiveCfg = Debug|x64
+		{9A034C97-9E3D-45D1-9C2F-B883A14AFCD9}.Debug|x64.Build.0 = Debug|x64
+		{9A034C97-9E3D-45D1-9C2F-B883A14AFCD9}.Release|x64.ActiveCfg = Release|x64
+		{9A034C97-9E3D-45D1-9C2F-B883A14AFCD9}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80D1B4CE-13E4-4AD8-87D6-69F9EDAF7428}
+	EndGlobalSection
+EndGlobal

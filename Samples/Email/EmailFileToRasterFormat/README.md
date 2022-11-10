@@ -4,13 +4,11 @@ ImageGear can convert an Email file into a single-paged image file.
 
 This sample demonstrates converting an Email file to 2 raster image formats with ImageGear. To convert an Email file, load the Email document and save as an corresponding image document.
 
-For more information about the ImageGear .NET Email conversion API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
 
 **NOTE:** If you want Email document to be paginated you should first convert it to a PDF document and then convert each individual PDF page to a raster image as in PDFFileToMultipageTIFF sample.
 
 ## System Requirements
-
-Email conversion API is only supported for 64 bit processes.
 
 For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
 
@@ -18,15 +16,26 @@ For a list of the system and development software necessary to build and run the
 
 Starting with ImageGear v26.0, ImageGear supports .NET Core.
 
-All samples can be built using Microsoft Visual Studio 2022 or later. To build this sample, open the .sln file in the project directory using Visual Studio, select a Solution Configuration (Debug or Release) and a Solution Platform (x64), and build with Build Solution located in the Build menu.  
+All samples can be built using Microsoft Visual Studio 2022.
 
-To build this sample under Linux, first install the Microsoft .NET SDK for your Linux distribution. After that, run `dotnet build EmailFileToRasterFormat.sln`. By default this will build the Debug Solution Configuration.
+To build this sample:
+
+1. Open the .sln file in the project directory using Visual Studio 2022.
+2. Select a Solution Configuration (Debug or Release) and an available Solution Platform (x64 or Any CPU).
+3. Build with Build Solution located in the Build menu.
+
+To build this sample under Linux:
+
+1. Install the Microsoft .NET SDK for your Linux distribution.
+2. Run `dotnet build EmailFileToRasterFormat.sln`. By default this will build the Debug Solution Configuration.
 
 ## Running the Sample
 
-When the sample is built, it produces a console application executable in the bin subdirectory. Run this application by double-clicking the application icon, or running it directly from Command Prompt (cmd.exe), PowerShell, or similar. Note that the working directory must be the same as the directory containing the sample executable in order to find the sample input image and the output directory. The input image(s) and output directory are specified relative to the location of the application in all of these samples.
+When the sample is built, it produces a console application executable in the bin subdirectory. Run this application by double-clicking the application icon, or run it directly from Command Prompt (cmd.exe), PowerShell, or similar. Note that the working directory must be the same as the directory containing the sample executable in order to find the sample input image and the output directory. The input image(s) and output directory are specified relative to the location of the application in all of these samples.
 
-To run this sample under Linux, run the sample from "bin/x64/Debug/net6.0/" using `./EmailFileToRasterFormat`.
+To run this sample under Linux, run the sample from "bin/Debug/net6.0/" or "bin/x64/Debug/net6.0/" (depending on the solution platform) using `./EmailFileToRasterFormat`.
+
+_**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com).
 
 ## Email Document Support in ImageGear .NET
 

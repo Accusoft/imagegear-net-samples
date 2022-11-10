@@ -24,12 +24,9 @@ namespace OfficeToPDF
             ImGearFileFormats.Filters.Add(ImGearOffice.CreateExcelFormat());
             ImGearFileFormats.Filters.Add(ImGearOffice.CreatePowerPointFormat());
 
-            // Initialize Office support for each process or thread by providing a path to your LibreOffice installation.
-            // See ImageGear documentation for more information.
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                ImGearOffice.Initialize(@"path/to/linux/libreoffice/bin/directory");
-            else
-                ImGearOffice.Initialize(@"path\to\windows\libreoffice\bin\directory");
+            // Initialize Office support for each process or thread. You must supply the path to your LibreOffice installation
+            // via the IMAGEGEAR_LIBREOFFICE_PATH environment variable. See ImageGear documentation for more information.
+            ImGearOffice.Initialize();
 
             // Load a Word document.
             using (Stream stream = new FileStream(@"../../../../../../../Sample Input/word-sample.docx", FileMode.Open, FileAccess.Read, FileShare.Read))

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Accusoft.ImageGear.Core" Version="26.2.*" />
+    <PackageReference Include="Accusoft.ImageGear.Core" Version="26.*" />
   </ItemGroup>
 
 </Project>

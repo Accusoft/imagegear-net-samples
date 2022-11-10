@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2022-10-25
+
+- Added load encrypted PDF sample
+
+## 2022-10-21
+
+- Added detect image format sample
+
 ## 2022-09-21
 
 - Added multi-page raster image to SVG sample

@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using ImageGear.Evaluation;
 using ImageGear.Formats;
 using ImageGear.Formats.PDF;
 

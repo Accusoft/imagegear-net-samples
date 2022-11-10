@@ -1,9 +1,7 @@
 ﻿using System.IO;
-using ImageGear.Evaluation;
 using ImageGear.Core;
 using ImageGear.Formats;
 using ImageGear.Formats.PDF;
-using ImageGear.Formats.PDF.Forms;
 
 namespace AddImageToPDFAsAPage
 {

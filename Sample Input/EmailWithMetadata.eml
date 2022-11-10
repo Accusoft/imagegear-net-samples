@@ -1,0 +1,24 @@
+Date: Thu, 27 Oct 2022 00:00:00 -0400 (EDT)
+From: "John Doe" <JohnDoe@accusoft.com>
+Subject: Email Metadata
+Sender: "John Doe" <JohnDoe@accusoft.com>
+To: "Jane Doe" <JaneDoe@accusoft.com>
+Cc: "anyone@accusoft.com" <anyone@accusoft.com>
+Bcc: "anyone@accusoft.com" <anyone@accusoft.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--_=_NextPart_F171E16F88BF4886B61F03BACC7E3C0D"
+
+----_=_NextPart_F171E16F88BF4886B61F03BACC7E3C0D
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+You can access the metadata of an e-mail using ImageGear!
+
+----_=_NextPart_F171E16F88BF4886B61F03BACC7E3C0D
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+>You can access the metadata of an e-mail using ImageGear!</p>
+----_=_NextPart_F171E16F88BF4886B61F03BACC7E3C0D--

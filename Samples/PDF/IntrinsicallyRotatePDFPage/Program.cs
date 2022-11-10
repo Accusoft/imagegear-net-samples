@@ -2,7 +2,6 @@
 using System.IO;
 using System.Collections.Generic;
 using ImageGear.Core;
-using ImageGear.Evaluation;
 using ImageGear.Formats;
 using ImageGear.Formats.PDF;
 

@@ -1,6 +1,4 @@
 using System.IO;
-using System.Runtime.InteropServices;
-using ImageGear.Evaluation;
 using ImageGear.Formats;
 using ImageGear.Formats.PDF;
 using ImageGear.Formats.Office;
@@ -23,12 +21,9 @@ namespace OfficeFileToRasterFormat
             // Initialize PDF support. Initialize for each process or thread.
             ImGearPDF.Initialize();
 
-            // Initialize Office support for each process or thread by providing a path to your LibreOffice installation.
-            // See ImageGear documentation for more information.
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                ImGearOffice.Initialize(@"path/to/linux/libreoffice/bin/directory");
-            else
-                ImGearOffice.Initialize(@"path\to\windows\libreoffice\bin\directory");
+            // Initialize Office support for each process or thread. You must supply the path to your LibreOffice installation
+            // via the IMAGEGEAR_LIBREOFFICE_PATH environment variable. See ImageGear documentation for more information.
+            ImGearOffice.Initialize();
 
             // Load a Word document.
             ImGearWordDocument imGearWordDocument = null;
