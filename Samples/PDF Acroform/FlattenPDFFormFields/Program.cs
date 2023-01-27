@@ -24,7 +24,7 @@ namespace FlattenPDFFormFields
                 using (ImGearPDFDocument imGearPDFDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream, 0, -1))
                 {
 
-                    // Flatten the PDF form fields
+                    // Flatten the PDF form fields.
                     imGearPDFDocument.FlattenFormFields(false);
 
                     // Save the flattened PDF document.

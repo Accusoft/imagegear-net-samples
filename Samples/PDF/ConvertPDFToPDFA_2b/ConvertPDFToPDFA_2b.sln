@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConvertPDFToPDFA_2b", "ConvertPDFToPDFA_2b.csproj", "{89F1416A-B2BA-451c-ACFF-08BD29B2C568}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89F1416A-B2BA-451c-ACFF-08BD29B2C568}.Debug|x64.ActiveCfg = Debug|x64
+		{89F1416A-B2BA-451c-ACFF-08BD29B2C568}.Debug|x64.Build.0 = Debug|x64
+		{89F1416A-B2BA-451c-ACFF-08BD29B2C568}.Release|x64.ActiveCfg = Release|x64
+		{89F1416A-B2BA-451c-ACFF-08BD29B2C568}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A723759E-966E-4124-B470-05FD7E9AC7CB}
+	EndGlobalSection
+EndGlobal

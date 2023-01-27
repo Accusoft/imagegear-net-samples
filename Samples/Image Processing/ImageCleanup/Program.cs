@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using ImageGear.Core;
 using ImageGear.Formats;
 using ImageGear.Processing.ImageClean;
@@ -17,6 +18,13 @@ namespace ImageCleanup
             using (FileStream stream = new FileStream(@"../../../../../../Sample Input/Bitonal-Cleanup-Sample.tif", FileMode.Open, FileAccess.Read, FileShare.Read))
                 imGearPage = ImGearFileFormats.LoadPage(stream, 0);
 
+            // Check for noise
+            if (ImGearIC.Verifier.CanApplyCheckForNoise(imGearPage))
+            {
+                int noiseObjectNum = ImGearIC.CheckForNoise(imGearPage, 10);
+                Console.WriteLine("Number of objects with size greater than 10 is " + noiseObjectNum.ToString());
+            }
+
             // Remove dotted lines from the page.
             ImGearICDotLineOptions dotLineOptions = new ImGearICDotLineOptions()
             {
@@ -26,7 +34,9 @@ namespace ImageCleanup
                 Unit = ImGearICUnits.MM,
                 Direction = ImGearICDirection.HORIZONTAL
             };
-            ImGearIC.RemoveDotLines(imGearPage, dotLineOptions);
+
+            if(ImGearIC.Verifier.CanApplyRemoveDotLines(imGearPage))
+                ImGearIC.RemoveDotLines(imGearPage, dotLineOptions);
 
             // Remove black borders from the page.
             ImGearICBorderOptions borderOptions = new ImGearICBorderOptions()
@@ -38,10 +48,12 @@ namespace ImageCleanup
                 nMinLinesNum = 10,
                 nMinLineWidth = 10
             };
-            ImGearIC.CleanBorders(imGearPage, borderOptions);
+            if (ImGearIC.Verifier.CanApplyCleanBorders(imGearPage))
+                ImGearIC.CleanBorders(imGearPage, borderOptions);
 
             // Orient the page content based on the text on the page.
-            ImGearIC.TextAutoOrientation(imGearPage, ImGearICDocumentType.STANDARD);
+            if (ImGearIC.Verifier.CanApplyAutoOrient(imGearPage))
+                ImGearIC.TextAutoOrientation(imGearPage, ImGearICDocumentType.STANDARD);
 
             // Remove hole puncher marks from the page.
             ImGearICPunchHoleOptions punchHoleOptions = new ImGearICPunchHoleOptions()
@@ -52,7 +64,8 @@ namespace ImageCleanup
                 MinDiameter = 5,
                 Unit = ImGearICUnits.MM
             };
-            ImGearIC.RemovePunchHoles(imGearPage, punchHoleOptions);
+            if (ImGearIC.Verifier.CanApplyRemovePunchHoles(imGearPage))
+                ImGearIC.RemovePunchHoles(imGearPage, punchHoleOptions);
 
             // Remove horizontal lines from the page.
             ImGearICLineOptions lineOptions = new ImGearICLineOptions()
@@ -63,13 +76,28 @@ namespace ImageCleanup
                 Unit = ImGearICUnits.MM,
                 Direction = ImGearICDirection.HORIZONTAL
             };
-            ImGearIC.RemoveLines(imGearPage, lineOptions);
+            if (ImGearIC.Verifier.CanApplyRemoveLines(imGearPage))
+                ImGearIC.RemoveLines(imGearPage, lineOptions);
 
             // Crop the page to the page content.
-            ImGearIC.AutoCrop(imGearPage);
+            if (ImGearIC.Verifier.CanApplyAutoCrop(imGearPage))
+                ImGearIC.AutoCrop(imGearPage);
 
             // Save image page.
             using (FileStream outputStream = new FileStream(@"../../../../../../Sample Output/ImageCleanup.tif", FileMode.Create))
+                ImGearFileFormats.SavePage(imGearPage, outputStream, 1, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.TIF_LZW, new ImGearSaveOptions());
+
+            // Invert the page if the percentage of black pixels is higher than 5.
+            if (ImGearIC.Verifier.CanApplyInvertBlackImage(imGearPage))
+                ImGearIC.InvertBlackImage(imGearPage, 5);
+
+            // Invert white text on black background using a minimum height of 40, width of 100, thickness of 10,
+            // minimum letter size of 10, maximum letter size of 100, and a maximum border of 5.
+            if (ImGearIC.Verifier.CanApplyInvertWhiteText(imGearPage))
+                ImGearIC.InvertWhiteText(imGearPage, 40, 100, 10, 10, 100, 5);
+
+            // Save image page.
+            using (FileStream outputStream = new FileStream(@"../../../../../../Sample Output/ImageCleanupInverted.tif", FileMode.Create))
                 ImGearFileFormats.SavePage(imGearPage, outputStream, 1, ImGearSavingModes.OVERWRITE, ImGearSavingFormats.TIF_LZW, new ImGearSaveOptions());
         }
     }

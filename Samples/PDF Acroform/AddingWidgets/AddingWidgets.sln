@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.33130.433
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingWidgets", "AddingWidgets.csproj", "{6B6E2272-BFF4-4AC5-8411-A9090913071E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B6E2272-BFF4-4AC5-8411-A9090913071E}.Debug|x64.ActiveCfg = Debug|x64
+		{6B6E2272-BFF4-4AC5-8411-A9090913071E}.Debug|x64.Build.0 = Debug|x64
+		{6B6E2272-BFF4-4AC5-8411-A9090913071E}.Release|x64.ActiveCfg = Release|x64
+		{6B6E2272-BFF4-4AC5-8411-A9090913071E}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A384097A-78CA-4418-B04D-FA4B0DDEB11C}
+	EndGlobalSection
+EndGlobal

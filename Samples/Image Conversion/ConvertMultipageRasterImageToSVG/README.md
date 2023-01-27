@@ -4,8 +4,6 @@ Convert a multi-page raster image to an SVG file suitable for display on most we
 
 Scalable Vector Graphics (SVG) is an XML-based format that describes two-dimensional vector (and raster) graphics. It is a popular format for expressing graphics on websites.
 
-In order to convert a multi-page raster image (e.g. TIFF) to SVG, first the image must be loaded from the source image file using ImGearFileFormats.LoadDocument(). After an ImGearDocument has been retrieved, it can then be saved to SVG using ImGearFileFormats.SaveDocument().
-
 For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
 
 ## System Requirements
@@ -35,7 +33,7 @@ When the sample is built, it produces a console application executable in the bi
 
 To run this sample under Linux, run the sample from "bin/Debug/net6.0/" (depending on the solution platform) using `./ConvertMultipageRasterImageToSVG`.
 
-_**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com).
+_**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com)._
 
 ## Image Conversion Support in ImageGear .NET
 

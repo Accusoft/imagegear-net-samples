@@ -33,7 +33,7 @@ When the sample is built, it produces a console application executable in the bi
 
 To run this sample under Linux, run the sample from "bin/Debug/net6.0/" (depending on the solution platform) using `./ConvertRasterImageFormat`.
 
-_**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com).
+_**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com)._
 
 ## Image Conversion Support in ImageGear .NET
 

@@ -18,7 +18,17 @@ namespace CompressPDFFile
             ImGearPDF.Initialize();
 
             // Create compression options with default values.
-            ImGearCompressOptions compressOptions = new ImGearCompressOptions();
+            ImGearCompressOptions compressOptions = new ImGearCompressOptions()
+            {
+                IsDownsampleImagesEnabled = true,
+                IsFieldFlatteningEnabled = false,
+                IsRemoveImageThumbnailEnabled = true,
+                IsRemoveMetadataEnabled = false,
+                RecompressImageJbig2CompressionLevel = ImGearJbig2CompressionLevel.LosslessGeneric,
+                RecompressImageJpeg2kCompressionLevel = ImGearJpeg2kCompressionLevel.LossyLow,
+                RecompressImageJpegCompressionLevel = ImGearJpegCompressionLevel.LossyLow,
+                RecompressUsingJpeg2k = false
+            };
 
             // Open file for PDF file reading.
             using (FileStream stream = new FileStream(@"../../../../../../../Sample Input/compression-info.pdf", FileMode.Open, FileAccess.Read, FileShare.Read))
@@ -27,7 +37,7 @@ namespace CompressPDFFile
             using (ImGearPDFDocument pdfDocument = (ImGearPDFDocument)ImGearFileFormats.LoadDocument(stream))
             {
                 // Save the PDF document with compression.
-                pdfDocument.SaveCompressed(@"../../../../../../../Sample Output/CompressPDFFile.pdf");
+                pdfDocument.SaveCompressed(@"../../../../../../../Sample Output/CompressPDFFile.pdf", compressOptions);
             }
 
             // Terminate PDF support once for each call to Initialize PDF support.

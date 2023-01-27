@@ -16,7 +16,7 @@ These samples demonstrate select image processing capabilities of ImageGear .NET
 
 ## General PDF Samples
 
-These samples demonstrate general PDF functionality in ImageGear .NET
+These samples demonstrate general PDF functionality in ImageGear .NET.
 
 ## PDF Acroform Samples
 

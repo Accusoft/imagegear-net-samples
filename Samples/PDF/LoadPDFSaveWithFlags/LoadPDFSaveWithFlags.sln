@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadPDFSaveWithFlags", "LoadPDFSaveWithFlags.csproj", "{F774BA6F-2342-4B6D-90E9-71B48433CC17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F774BA6F-2342-4B6D-90E9-71B48433CC17}.Debug|x64.ActiveCfg = Debug|x64
+		{F774BA6F-2342-4B6D-90E9-71B48433CC17}.Debug|x64.Build.0 = Debug|x64
+		{F774BA6F-2342-4B6D-90E9-71B48433CC17}.Release|x64.ActiveCfg = Release|x64
+		{F774BA6F-2342-4B6D-90E9-71B48433CC17}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C915F220-F3AC-4F55-B509-6841021EC6B6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlipAndRotateRasterImage", "FlipAndRotateRasterImage.csproj", "{E9DD5400-367C-4C75-A838-2300270A520E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9DD5400-367C-4C75-A838-2300270A520E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9DD5400-367C-4C75-A838-2300270A520E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9DD5400-367C-4C75-A838-2300270A520E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9DD5400-367C-4C75-A838-2300270A520E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD80DF76-A8D1-477C-A2B7-AAC97D85564C}
+	EndGlobalSection
+EndGlobal

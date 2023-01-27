@@ -20,10 +20,13 @@ namespace CropAndResizeRasterImage
             // Crop the image.
             int width = imGearPage.DIB.Width;
             int height = imGearPage.DIB.Height;
-            ImGearProcessing.Crop(imGearPage, width / 4, height / 4, width * 3 / 4, height * 3 / 4);
+            if (ImGearProcessing.Verifier.CanApplyCrop(imGearPage))
+                ImGearProcessing.Crop(imGearPage, width / 4, height / 4, width * 3 / 4, height * 3 / 4);
 
             // Enlarge the cropped image using bi-linear interpolation.
-            ImGearProcessing.Resize(imGearPage, width * 2, height * 2, ImGearInterpolationOptions.GetDefault(ImGearInterpolations.BILINEAR));
+            ImGearInterpolationOptions opt = ImGearInterpolationOptions.GetDefault(ImGearInterpolations.BILINEAR);
+            if (ImGearProcessing.Verifier.CanApplyResize(imGearPage, width * 2, height * 2, opt))
+                ImGearProcessing.Resize(imGearPage, width * 2, height * 2, opt);
 
             // Save image page.
             using (FileStream outputStream = new FileStream(@"../../../../../../Sample Output/CropAndResizeRasterImage.png", FileMode.Create))

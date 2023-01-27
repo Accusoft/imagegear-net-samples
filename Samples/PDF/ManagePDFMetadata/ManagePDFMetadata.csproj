@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net6.0;net48</TargetFrameworks>
+    <RollForward>Major</RollForward>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Accusoft.ImageGear.Core" Version="26.*" />
+    <PackageReference Include="Accusoft.ImageGear.Pdf" Version="26.*" />
+  </ItemGroup>
+
+</Project>

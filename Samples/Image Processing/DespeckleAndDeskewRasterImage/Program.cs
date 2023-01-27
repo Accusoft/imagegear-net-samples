@@ -18,10 +18,12 @@ namespace DespeckleAndDeskewRasterImage
                 imGearPage = ImGearFileFormats.LoadPage(stream, 0);
 
             // Despeckle the image.
-            ImGearRasterProcessing.Despeckle((ImGearRasterPage)imGearPage, 5, 5);
+            if (ImGearRasterProcessing.Verifier.CanApplyDespeckle((ImGearRasterPage)imGearPage))
+                ImGearRasterProcessing.Despeckle((ImGearRasterPage)imGearPage, 5, 5);
 
             // Deskew the image.
-            ImGearRasterProcessing.Deskew((ImGearRasterPage)imGearPage, 0.1, ImGearRotationModes.CLIP, null);
+            if (ImGearRasterProcessing.Verifier.CanApplyDeskew((ImGearRasterPage)imGearPage))
+                ImGearRasterProcessing.Deskew((ImGearRasterPage)imGearPage, 0.1, ImGearRotationModes.CLIP, null);
 
             // Save image page.
             using (FileStream outputStream = new FileStream(@"../../../../../../Sample Output/DespeckleAndDeskewRasterImage.tif", FileMode.Create))

@@ -2,7 +2,7 @@
 
 When a document scan presents undesirable artifacts, ImageGear can clean up the image to make it more suitable for further processing.
 
-Once an image is loaded into ImageGear, use the static methods of the `ImGearIC` class to perform various cleanup routines, such as removing hole puncher marks and lines, inverting white text, and cleaning scan borders.
+Once an image is loaded into ImageGear, use the static methods of the `ImGearIC` class to perform various cleanup routines, such as checking for noise, removing hole puncher marks and lines, auto orienting text, auto cropping, inverting black images and white text on a black background, and cleaning scan borders.
 
 For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
 
@@ -33,7 +33,7 @@ When the sample is built, it produces a console application executable in the bi
 
 To run this sample under Linux, run the sample from "bin/Debug/net6.0/" (depending on the solution platform) using `./ImageCleanup`.
 
-_**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com).
+_**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com)._
 
 ## Image Processing Support in ImageGear .NET
 
