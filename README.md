@@ -94,4 +94,5 @@ ImageGear .NET supports the most commonly used image, graphic, and document form
 | | [PDFFileToMultipageTIFFAtHighResolution](Samples/PDF/PDFFileToMultipageTIFFAtHighResolution) | Convert a PDF file to TIFF at high resolution to improve image quality. |
 | | [SaveAllImagesOnPDFPage](Samples/PDF/SaveAllImagesOnPDFPage) | After a PDF page is loaded, the objects on the page can be traversed. |
 | | [SetPDFSecurity](Samples/PDF/SetPDFSecurity) | ImageGear can set the security on a PDF document using the SetNewCryptHandler and SetNewSecurityData functions. |
+| | [SmartZoneOCRToPDF](Samples/PDF/SmartZoneOCRToPDF) | ImageGear can take the recognition results from SmartZone and generate a searchable and copyable PDF page. |
 | | [SplitPDFIntoMultiplePDFs](Samples/PDF/SplitPDFIntoMultiplePDFs) | This sample demonstrates how to create new separate PDF documents from a PDF that has been loaded by ImageGear. |

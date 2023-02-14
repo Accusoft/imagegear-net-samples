@@ -65,3 +65,7 @@ After a PDF page is loaded, the objects on the page can be traversed.
 ## SetPDFSecurity
 
 ImageGear can set the security on a PDF document using the SetNewCryptHandler and SetNewSecurityData functions.
+
+## SmartZoneOCRToPDF
+
+ImageGear can take the recognition results from SmartZone and generate a searchable and copyable PDF page.
