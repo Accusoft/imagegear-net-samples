@@ -2,7 +2,7 @@
 
 ImageGear allows the values of form fields in a PDF document to be set.
 
-This sample demonstrates how to set the values of form fields and save those values to a PDF file. ImageGear provides methods and properties to set current values or arrays of values for Acroform fields.
+This sample demonstrates how to set the values of form fields and save those values to a PDF file. ImageGear provides methods and properties to set current values or arrays of values for AcroForm fields.
 
 For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
 
@@ -35,6 +35,6 @@ To run this sample under Linux, run the sample from "bin/Debug/net6.0/" or "bin/
 
 _**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com)._
 
-## PDF Acroform Support in ImageGear .NET
+## PDF AcroForm Support in ImageGear .NET
 
-ImageGear .NET supports adding, updating, and deleting AcroForm fields in new or existing PDFs. For more information on PDF acroform support in ImageGear .NET, [please visit us at Accusoft.](https://www.accusoft.com/products/imagegear-collection/imagegear-dot-net/)
+ImageGear .NET supports adding, updating, and deleting AcroForm fields in new or existing PDFs. For more information on PDF AcroForm support in ImageGear .NET, [please visit us at Accusoft.](https://www.accusoft.com/products/imagegear-collection/imagegear-dot-net/)

@@ -62,13 +62,13 @@ ImageGear .NET supports the most commonly used image, graphic, and document form
 | | [OfficeFileToPDFFile](Samples/Office/OfficeFileToPDFFile) | This sample demonstrates how to load an Office document into ImageGear and save the document as a PDF. |
 | | [OfficeFileToRasterFormat](Samples/Office/OfficeFileToRasterFormat) | After an Office document is loaded, ImageGear can rasterize individual pages or the entire document and save them to raster formats. |
 | | [ReadOfficeMetadata](Samples/Office/ReadOfficeMetadata) | ImageGear provides functionality to access metadata from the Office document. |
-| [***PDF Acroform Samples***](Samples/PDF%20Acroform) | | These samples demonstrate PDF Acroform support in ImageGear .NET. |
-| | [AddingWidgets](Samples/PDF%20Acroform/AddingWidgets) | ImageGear allows adding widgets (radio button, checkboxes, listboxes, etc.) to PDF Acroforms. |
-| | [CreatePDFFormField](Samples/PDF%20Acroform/CreatePDFFormField) | Starting with a PDF document, new or existing, first the PDF document is set to contain forms. Then form controls can be added to any page in the PDF document. |
-| | [FlattenPDFFormFields](Samples/PDF%20Acroform/FlattenPDFFormFields) | This sample demonstrates how to flatten form fields. |
-| | [ModifyFieldAppearance](Samples/PDF%20Acroform/ModifyFieldAppearance) | This sample demonstrates how to add borders or change different attributes to widgets on PDF Forms. |
-| | [ReadPDFFormFields](Samples/PDF%20Acroform/ReadPDFFormFields) | This sample demonstrates how to read the values from form fields. |
-| | [SetPDFFormFields](Samples/PDF%20Acroform/SetPDFFormFields) | This sample demonstrates how to set the values of form fields and save those values to a PDF file. |
+| [***PDF AcroForm Samples***](Samples/PDF%20AcroForm) | | These samples demonstrate PDF AcroForm support in ImageGear .NET. |
+| | [AddingWidgets](Samples/PDF%20AcroForm/AddingWidgets) | ImageGear allows adding widgets (radio button, checkboxes, listboxes, etc.) to PDF AcroForms. |
+| | [CreatePDFFormField](Samples/PDF%20AcroForm/CreatePDFFormField) | Starting with a PDF document, new or existing, first the PDF document is set to contain forms. Then form controls can be added to any page in the PDF document. |
+| | [FlattenPDFFormFields](Samples/PDF%20AcroForm/FlattenPDFFormFields) | This sample demonstrates how to flatten form fields. |
+| | [ModifyFieldAppearance](Samples/PDF%20AcroForm/ModifyFieldAppearance) | This sample demonstrates how to add borders or change different attributes to widgets on PDF Forms. |
+| | [ReadPDFFormFields](Samples/PDF%20AcroForm/ReadPDFFormFields) | This sample demonstrates how to read the values from form fields. |
+| | [SetPDFFormFields](Samples/PDF%20AcroForm/SetPDFFormFields) | This sample demonstrates how to set the values of form fields and save those values to a PDF file. |
 | [***PDF Compression Samples***](Samples/PDF%20Compression) | | These samples demonstrate how to compress PDF file content using ImageGear .NET. |
 | | [CompressPDFFile](Samples/PDF%20Compression/CompressPDFFile) | To reduce the size of a PDF file, ImageGear provides the SaveCompressed function. |
 | [***Combined PDF and JPEG Samples***](Samples/PDF%20and%20JPEG) | | These samples demonstrate general raster image functionality in ImageGear .NET. |
@@ -96,3 +96,5 @@ ImageGear .NET supports the most commonly used image, graphic, and document form
 | | [SetPDFSecurity](Samples/PDF/SetPDFSecurity) | ImageGear can set the security on a PDF document using the SetNewCryptHandler and SetNewSecurityData functions. |
 | | [SmartZoneOCRToPDF](Samples/PDF/SmartZoneOCRToPDF) | ImageGear can take the recognition results from SmartZone and generate a searchable and copyable PDF page. |
 | | [SplitPDFIntoMultiplePDFs](Samples/PDF/SplitPDFIntoMultiplePDFs) | This sample demonstrates how to create new separate PDF documents from a PDF that has been loaded by ImageGear. |
+| [***REST API Samples***](Samples/REST%20API) | | These samples demonstrate making use of ImageGear document and image processing operations remotely using ImageGear's REST APIs |
+| | [PDFtoPDFARestAPI](Samples/REST%20API/PDFtoPDFARestAPI) | Convert a PDF file to PDF/A remotely using REST API. |

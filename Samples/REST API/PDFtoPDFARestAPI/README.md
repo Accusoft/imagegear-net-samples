@@ -1,10 +1,10 @@
-# Read the Form Field Values from a PDF file (ReadPDFFormFields)
+# Convert PDF to PDF/A using REST API (PDFtoPDFARestAPI)
 
-ImageGear allows the values of form fields in a PDF document to be read.
+ImageGear provides REST API to convert a PDF to PDF/A remotely.
 
-This sample demonstrates how to read the values from form fields. ImageGear provides methods and properties to read current and default values or arrays of values from AcroForm fields.
+This example reads a PDF file to the stream and uploads it to the Accusoft API server where the PDF is converted to PDF/A. Then, the converted PDF/A is downloaded from the server and saved to a disk file.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET REST API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
 
 ## System Requirements
 
@@ -18,23 +18,24 @@ All samples can be built using Microsoft Visual Studio 2022.
 
 To build this sample:
 
-1. Open the .sln file in the project directory using Visual Studio 2022.
-2. Select a Solution Configuration (Debug or Release) and an available Solution Platform (x64 or Any CPU).
-3. Build with Build Solution located in the Build menu.
+1. Set environment variable ACCUSOFT_CLOUD_KEY to your Accusoft API Key. The API Key can be obtained here: [Accusoft cloud web site.](https://cloud.accusoft.com)
+2. Open the .sln file in the project directory using Visual Studio 2022.
+3. Select a Solution Configuration (Debug or Release) and an available Solution Platform (x64 or Any CPU).
+4. Build with Build Solution located in the Build menu.
 
 To build this sample under Linux:
 
 1. Install the Microsoft .NET SDK for your Linux distribution.
-2. Run `dotnet build ReadPDFFormFields.sln`. By default this will build the Debug Solution Configuration.
+2. Run `dotnet build PDFtoPDFARestAPI.sln`. By default this will build the Debug Solution Configuration.
 
 ## Running the Sample
 
 When the sample is built, it produces a console application executable in the bin subdirectory. Run this application by double-clicking the application icon, or run it directly from Command Prompt (cmd.exe), PowerShell, or similar. Note that the working directory must be the same as the directory containing the sample executable in order to find the sample input image and the output directory. The input image(s) and output directory are specified relative to the location of the application in all of these samples.
 
-To run this sample under Linux, run the sample from "bin/Debug/net6.0/" or "bin/x64/Debug/net6.0/" (depending on the solution platform) using `./ReadPDFFormFields`.
+To run this sample under Linux, run the sample from "bin/Debug/net6.0/" using `./PDFtoPDFARestAPI`.
 
 _**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com)._
 
-## PDF AcroForm Support in ImageGear .NET
+## PDF Support in ImageGear .NET
 
-ImageGear .NET supports adding, updating, and deleting AcroForm fields in new or existing PDFs. For more information on PDF AcroForm support in ImageGear .NET, [please visit us at Accusoft.](https://www.accusoft.com/products/imagegear-collection/imagegear-dot-net/)
+ImageGear .NET is a robust, multi-platform, multi-language PDF solution. For more information on PDF support in ImageGear .NET, [please visit us at Accusoft.](https://www.accusoft.com/products/imagegear-collection/imagegear-dot-net/)

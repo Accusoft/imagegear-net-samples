@@ -1,10 +1,10 @@
-# PDF Acroform Samples
+# PDF AcroForm Samples
 
-These samples demonstrate PDF Acroform support in ImageGear .NET.
+These samples demonstrate PDF AcroForm support in ImageGear .NET.
 
 ## AddingWidgets
 
-ImageGear allows adding widgets (radio button, checkboxes, listboxes, etc.) to PDF Acroforms.
+ImageGear allows adding widgets (radio button, checkboxes, listboxes, etc.) to PDF AcroForms.
 
 ## CreatePDFFormField
 
@@ -20,8 +20,8 @@ This sample demonstrates how to accentuate a widget to fit better in the PDF for
 
 ## ReadPDFFormFields
 
-This sample demonstrates how to read the values from form fields. ImageGear provides methods and properties to read current and default values or arrays of values from Acroform fields.
+This sample demonstrates how to read the values from form fields. ImageGear provides methods and properties to read current and default values or arrays of values from AcroForm fields.
 
 ## SetPDFFormFields
 
-This sample demonstrates how to set the values of form fields and save those values to a PDF file. ImageGear provides methods and properties to set current values or arrays of values for Acroform fields.
+This sample demonstrates how to set the values of form fields and save those values to a PDF file. ImageGear provides methods and properties to set current values or arrays of values for AcroForm fields.

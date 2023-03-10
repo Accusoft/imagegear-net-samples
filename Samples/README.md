@@ -18,9 +18,9 @@ These samples demonstrate select image processing capabilities of ImageGear .NET
 
 These samples demonstrate general PDF functionality in ImageGear .NET.
 
-## PDF Acroform Samples
+## PDF AcroForm Samples
 
-These samples demonstrate PDF Acroform support in ImageGear .NET.
+These samples demonstrate PDF AcroForm support in ImageGear .NET.
 
 ## Combined PDF and JPEG Samples
 
@@ -37,3 +37,7 @@ These samples demonstrate how to convert an Email document to PDF, extract attac
 ## PDF XFA Samples
 
 These samples demonstrate PDF XFA support in ImageGear .NET.
+
+## REST API Samples
+
+These samples demonstrate making use of ImageGear document and image processing operations remotely using ImageGear's REST APIs

@@ -2,7 +2,7 @@
 
 Sometimes Fields need to visually stand out for emphasis or to show importance. Fields and their widgets have various properties to control appearance when a PDF page is rendered or displayed.
 
-This sample shows how to change appearance for a few preexisting Acroform Fields and their Widgets. Read or update text style information for Fields that display text (which includes TextField, ListBox, ComboBox, CheckBox, SignatureField, and PushButton fields) using FontName, FontSize, and TextColor properties. Read or update Widget appearance using its BorderStyle, BorderColor, BorderWidth and FillColor properties.
+This sample shows how to change appearance for a few preexisting AcroForm Fields and their Widgets. Read or update text style information for Fields that display text (which includes TextField, ListBox, ComboBox, CheckBox, SignatureField, and PushButton fields) using FontName, FontSize, and TextColor properties. Read or update Widget appearance using its BorderStyle, BorderColor, BorderWidth and FillColor properties.
 
 For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
 
@@ -35,6 +35,6 @@ To run this sample under Linux, run the sample from "bin/Debug/net6.0/" or "bin/
 
 _**NOTE:** ImageGear .NET runs in evaluation mode if started without a license. In evaluation mode, documents and images will be watermarked when exported or displayed. If you would like to work with a full-featured evaluation of the product, [please contact Accusoft at info@accusoft.com](mailto:info@accusoft.com)._
 
-## PDF Acroform Support in ImageGear .NET
+## PDF AcroForm Support in ImageGear .NET
 
-ImageGear .NET supports adding, updating, and deleting AcroForm fields in new or existing PDFs. For more information on PDF acroform support in ImageGear .NET, [please visit us at Accusoft.](https://www.accusoft.com/products/imagegear-collection/imagegear-dot-net/)
+ImageGear .NET supports adding, updating, and deleting AcroForm fields in new or existing PDFs. For more information on PDF AcroForm support in ImageGear .NET, [please visit us at Accusoft.](https://www.accusoft.com/products/imagegear-collection/imagegear-dot-net/)

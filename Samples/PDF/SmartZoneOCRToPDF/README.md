@@ -1,4 +1,4 @@
-# Convert SmartZon OCR output to a PDF File (SmartZoneOCRToPDF)
+# Convert SmartZone OCR output to a PDF File (SmartZoneOCRToPDF)
 
 ## ***Due to a limitation in a third-party SDK, this sample is not currently supported under Linux.***
 
