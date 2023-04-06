@@ -98,3 +98,5 @@ ImageGear .NET supports the most commonly used image, graphic, and document form
 | | [SplitPDFIntoMultiplePDFs](Samples/PDF/SplitPDFIntoMultiplePDFs) | This sample demonstrates how to create new separate PDF documents from a PDF that has been loaded by ImageGear. |
 | [***REST API Samples***](Samples/REST%20API) | | These samples demonstrate making use of ImageGear document and image processing operations remotely using ImageGear's REST APIs |
 | | [PDFtoPDFARestAPI](Samples/REST%20API/PDFtoPDFARestAPI) | Convert a PDF file to PDF/A remotely using REST API. |
+| | [PDFXFARestAPI](Samples/REST%20API/PDFXFARestAPI) | Remove XFA (XML Forms) from PDF file remotely using REST API. |
+| | [ImageEditorRestAPI](Samples/REST%20API/ImageEditorRestAPI) | Rotate, resize and crop raster images remotely using REST API. |

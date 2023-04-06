@@ -3,24 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDFtoPDFARestAPI", "PDFtoPDFARestAPI.csproj", "{D2B193B3-96E9-4317-B357-8032CD6833DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDFXFARestAPI", "PDFXFARestAPI.csproj", "{C2D26B57-E0E4-4B4A-82AC-A7029CDE011E}"
 EndProject
-
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D2B193B3-96E9-4317-B357-8032CD6833DF}.Debug|x64.ActiveCfg = Debug|x64
-		{D2B193B3-96E9-4317-B357-8032CD6833DF}.Debug|x64.Build.0 = Debug|x64
-		{D2B193B3-96E9-4317-B357-8032CD6833DF}.Release|x64.ActiveCfg = Release|x64
-		{D2B193B3-96E9-4317-B357-8032CD6833DF}.Release|x64.Build.0 = Release|x64
+		{C2D26B57-E0E4-4B4A-82AC-A7029CDE011E}.Debug|x64.ActiveCfg = Debug|x64
+		{C2D26B57-E0E4-4B4A-82AC-A7029CDE011E}.Debug|x64.Build.0 = Debug|x64
+		{C2D26B57-E0E4-4B4A-82AC-A7029CDE011E}.Release|x64.ActiveCfg = Release|x64
+		{C2D26B57-E0E4-4B4A-82AC-A7029CDE011E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9CAA2706-F498-49A3-8F20-4F78FE6F56C6}
+		SolutionGuid = {87B56486-61D5-40A5-9865-3F2E248850F0}
 	EndGlobalSection
 EndGlobal

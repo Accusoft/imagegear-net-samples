@@ -9,19 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="extras\**" />
-    <EmbeddedResource Remove="extras\**" />
-    <None Remove="extras\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Program - Copy.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Accusoft.ImageGear.Core" Version="26.*" />
     <PackageReference Include="Accusoft.ImageGear.Pdf" Version="26.*" />
-    <PackageReference Include="Accusoft.SmartZoneOCR.Net" Version="7.2.807" />
+    <PackageReference Include="Accusoft.SmartZoneOCR.Net" Version="7.*" />
     <PackageReference Include="Accusoft.SmartZone.Runtime.Win" Version="7.*" />
   </ItemGroup>
 
