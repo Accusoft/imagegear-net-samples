@@ -4,11 +4,11 @@ Specify global color profiles to implicitly use with all color conversion operat
 
 This sample shows how to implicitly use ImageGear's re-distributed ICM color profiles to convert the color space in a JPEG image from RGB to CMYK. Color profiles contain complex mappings that make it possible to carefully manage the translations of colors between different color spaces and gamuts to improve conversions to different color spaces.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

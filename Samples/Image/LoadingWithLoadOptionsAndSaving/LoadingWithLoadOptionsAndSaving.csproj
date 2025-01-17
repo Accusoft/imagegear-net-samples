@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,7 +8,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Accusoft.ImageGear.Core" Version="26.*" />
+    <PackageReference Include="Accusoft.ImageGearMP.Core" Version="27.*" />
   </ItemGroup>
 
 </Project>

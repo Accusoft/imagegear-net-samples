@@ -4,11 +4,11 @@ When a raster image is not in a desired format, ImageGear can convert the format
 
 In order to convert the format of a raster image, first the image must be loaded from the source image file using either ImGearFileFormats.LoadPage() or ImGearFileFormats.LoadDocument() and then the Pages property from the returned ImGearDocument object. After an ImGearPage has been retrieved, it can then be saved as any supported raster image format using ImGearFileFormats.SavePage().
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

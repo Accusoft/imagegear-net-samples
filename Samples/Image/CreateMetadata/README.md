@@ -6,11 +6,11 @@ Metadata describes information such as details about an image's visual content, 
 
 This sample shows how to use ImageGear's Simplified Metadata API to add IPTC Photo Metadata fields for licensing and attribution to an existing JPEG image lacking this metadata.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

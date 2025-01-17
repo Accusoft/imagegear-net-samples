@@ -6,11 +6,11 @@ Use a Region of Interest when image processing operations should be limited to a
 
 After loading a raster image, assign a ImGearROIRectangle object for a rectangular area of the image to its ROI property. When image processing is applied to that raster image, only the area within its ROI is affected.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

@@ -4,11 +4,11 @@ When attachments from an Email document are needed, ImageGear can extract and sa
 
 This sample loads an Email document with ImageGear and demonstrates how to access attachments contained in the document. After the Email document is loaded, attachments can be directly accessed and saved as files.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

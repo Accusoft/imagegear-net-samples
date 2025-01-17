@@ -17,7 +17,7 @@ namespace ImageEditorRestAPI
         static string processAPI = "/imageGear/api/v1/imageEditors";
         static string workerFileAPI = "/PCCIS/V1/WorkFile";
 
-        // Create an HTTP Client
+        // Create an HTTP Client.
         private static HttpClient httpClient = new HttpClient { BaseAddress = new Uri(BaseUrl) };
 
         static async Task Main(string[] args)
@@ -26,7 +26,7 @@ namespace ImageEditorRestAPI
             var apiKey = System.Environment.GetEnvironmentVariable("ACCUSOFT_CLOUD_KEY") ?? "YourAPIKeyHere...";
             httpClient.DefaultRequestHeaders.Add("acs-api-key", apiKey);
 
-            // Upload raster image
+            // Upload raster image.
             var workfileApi = @"/PCCIS/V1/WorkFile?FileExtension=jpg";
             var content = new StreamContent(File.OpenRead(@"../../../../../../../Sample Input/water.jpg"));
             content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/octet-stream");
@@ -46,7 +46,7 @@ namespace ImageEditorRestAPI
                 httpClient.DefaultRequestHeaders.Add("Accusoft-Affinity-Token", affinityToken.ToString());
             }
 
-            // Build JSON for the Rotate, Resize and Crop request
+            // Build JSON for the Rotate, Resize and Crop request.
             var requestJson = new
             {
                 input = new
@@ -82,29 +82,29 @@ namespace ImageEditorRestAPI
                 }
             };
 
-            // Create processes
+            // Create processes.
             var processRequestContent = new StringContent(JsonSerializer.Serialize(requestJson), Encoding.UTF8, "application/json");
             var processRequest = await httpClient.PostAsync(processAPI, processRequestContent);
             string processRequestResponse = await processRequest.Content.ReadAsStringAsync();
             string processId = JsonNode.Parse(processRequestResponse)!["processId"]!.ToString();
 
-            // Process the image
+            // Process the image.
             string convertAPI = processAPI + "/" + processId;
             string processStatusResponse = await httpClient.GetStringAsync(convertAPI);
 
-            // Wait for the process to complete
+            // Wait for the process to complete.
             while (JsonNode.Parse(processStatusResponse)!["state"]!.ToString() == "processing")
             {
                 Thread.Sleep(1000);
                 processStatusResponse = await httpClient.GetStringAsync(convertAPI);
             }
 
-            // Get converted file ID and download it from the server
+            // Get converted file ID and download it from the server.
             var output = JsonNode.Parse(processStatusResponse)!["output"]!;
             var outputWorkFileId = output["fileId"]!.ToString();
 
             HttpResponseMessage downloadRequest = await httpClient.GetAsync(workerFileAPI + "/" + outputWorkFileId);
-            using (var fileStream = new FileStream(@"../../../../../../../Sample Output/ImageEditorRestAPI.jpg", FileMode.Create))
+            using (var fileStream = new FileStream(@"../../../../../../../Sample Output/ImageEditorRestAPI.tif", FileMode.Create))
             {
                 await downloadRequest.Content.CopyToAsync(fileStream);
             }

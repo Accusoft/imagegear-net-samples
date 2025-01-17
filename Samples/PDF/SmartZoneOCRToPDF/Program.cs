@@ -3,6 +3,7 @@ using ImageGear.Core;
 using ImageGear.Formats;
 using ImageGear.Formats.PDF;
 using Accusoft.SmartZoneOCRSdk;
+using System;
 
 namespace SmartZoneOCRToPDF
 {
@@ -95,7 +96,7 @@ namespace SmartZoneOCRToPDF
                             textMatrix.A = ImGearPDF.DoubleToFixed((double)characterResult.CapitalLetterHeight * 1.5 * heightPixelsToPoints);
                             textMatrix.D = ImGearPDF.DoubleToFixed((double)characterResult.CapitalLetterHeight * 1.5 * heightPixelsToPoints);
                         }
-                        textMatrix.H = ImGearPDF.DoubleToFixed(characterResult.Area.X * widthPixelsToPoints);
+                        textMatrix.H = ImGearPDF.DoubleToFixed(characterResult.Zone.X * widthPixelsToPoints);
                         textMatrix.V = ImGearPDF.DoubleToFixed(pdfHeight - characterResult.Baseline * heightPixelsToPoints);
 
                         // Add the character to the text element.
@@ -134,7 +135,12 @@ namespace SmartZoneOCRToPDF
             {
                 smartZoneOCR.Reader.CharacterSet = CharacterSet.AllCharacters;
                 smartZoneOCR.Reader.CharacterSet.Language = Language.WesternEuropean;
+
                 textBlockResult = smartZoneOCR.Reader.AnalyzeField(imGearRasterPage);
+                if (textBlockResult != null)
+                {
+                    Console.WriteLine(textBlockResult.Text);
+                }
             }
 
             // Create a PDF document.

@@ -4,11 +4,11 @@ When using ImageGear to save PDF files, it may be useful to reduce the size to a
 
 This sample demonstrates saving a PDF file using various flags. There are instances with fonts used in the creation of the PDF that their encodings and descriptors are identical, taking up unnecessary space. Also, streams should be optimized, merging substreams and reducing the size of the outputted PDF. Unreferenced items can increase the space making the PDF larger than expected. Objects using the creation or editing of the PDF will use more space. Removing, or reducing the impact of these obstacles will also reduce the overall size, making transportation and storage easier.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

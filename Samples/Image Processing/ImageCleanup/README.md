@@ -4,11 +4,11 @@ When a document scan presents undesirable artifacts, ImageGear can clean up the 
 
 Once an image is loaded into ImageGear, use the static methods of the `ImGearIC` class to perform various cleanup routines, such as checking for noise, removing hole puncher marks and lines, auto orienting text, auto cropping, inverting black images and white text on a black background, and cleaning scan borders.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

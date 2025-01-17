@@ -6,11 +6,11 @@ The basic effect of erosion is to erode away the boundaries of regions of foregr
 
 The basic effect of dilation is to gradually enlarge the boundaries of regions of foreground pixels (white pixels). Thus areas of foreground pixels grow in size, while holes within those regions become smaller. Applying this to the image will make bright objects larger, that is, the image will be lighter.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

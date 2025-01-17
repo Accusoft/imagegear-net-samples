@@ -4,11 +4,11 @@ When the content of a PDF needs to be protected, ImageGear can set the PDF secur
 
 ImageGear can set the security on a PDF document using the SetNewCryptHandler and SetNewSecurityData functions. Note that the PDF permissions allow control of copy text and image content from the pages, the ability to print pages, as well as all other permissions defined in the PDF Reference.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

@@ -4,11 +4,11 @@ Sometimes Fields need to visually stand out for emphasis or to show importance. 
 
 This sample shows how to change appearance for a few preexisting AcroForm Fields and their Widgets. Read or update text style information for Fields that display text (which includes TextField, ListBox, ComboBox, CheckBox, SignatureField, and PushButton fields) using FontName, FontSize, and TextColor properties. Read or update Widget appearance using its BorderStyle, BorderColor, BorderWidth and FillColor properties.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

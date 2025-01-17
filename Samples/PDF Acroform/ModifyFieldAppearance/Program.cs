@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Drawing;
 using ImageGear.Core;
 using ImageGear.Formats;
 using ImageGear.Formats.PDF;
@@ -30,7 +29,7 @@ namespace ModifyFieldAppearance
                         pdfDocument.CreateForm();
 
                     // Text Box items for decoration.
-                    pdfDocument.Form.Fields[0].TextColor = Color.Red;
+                    pdfDocument.Form.Fields[0].TextColor = new ImGearRGBQuad() { Red = 255 };
                     pdfDocument.Form.Fields[0].FontSize = 45;
                     pdfDocument.Form.Fields[0].FontName = "Helvetica";
 
@@ -40,8 +39,8 @@ namespace ModifyFieldAppearance
                         foreach (WidgetAnnotation widget in field.Widgets)
                         {
                             // Set fill and border colors.
-                            widget.FillColor = Color.Red;
-                            widget.BorderColor = Color.YellowGreen;
+                            widget.FillColor = new ImGearRGBQuad() { Red = 255 };
+                            widget.BorderColor = new ImGearRGBQuad() { Red = 0x9A, Blue = 0x32, Green = 0xCD };
 
                             // Set a thick border width (size 3).
                             // Any integer can also be used.

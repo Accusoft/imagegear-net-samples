@@ -4,11 +4,11 @@ When specific pages need to be removed from a PDF, ImageGear can remove those pa
 
 Pages can be removed from the front (0), end (Pages.Count - 1), or specific page number from a PDF file. Calling the Save method with ImGearSavingModes.OVERWRITE causes the contents of the page (that isn't share with other pages) to be removed from the file.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

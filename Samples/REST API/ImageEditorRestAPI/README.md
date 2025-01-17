@@ -1,14 +1,14 @@
-# Convert the image using REST API (ImageEditorRestAPI)
+# Rotate, resize, and crop the image using REST API (ImageEditorRestAPI)
 
 ImageGear provides REST API to process raster image by one or several ImageGear .NET image editing operations.
 
 This example reads a raster image file to the stream and uploads it to the Accusoft API server where the image can be rotated, resized and cropped. Then, modified images are downloaded from the server and saved to a disk file.
 
-For more information about the ImageGear .NET REST API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET REST API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

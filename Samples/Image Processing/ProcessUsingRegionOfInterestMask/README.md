@@ -6,11 +6,11 @@ Use a Region of Interest mask when image processing operations should be limited
 
 After loading a raster image, create an ImGearROIMask from either a bitonal image, a shape (such as an ellipse, polygon, or freehand), or a mask color. Assign this ImGearROIMask object to the raster image ROI property. When image processing is applied to that raster image, only the area within its ROI is affected.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

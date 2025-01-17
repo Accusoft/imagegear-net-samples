@@ -4,11 +4,11 @@ When the size of a PDF file is too large, ImageGear can reduce the size of a PDF
 
 To reduce the size of a PDF file, ImageGear provides the SaveCompressed function. The function without extra parameters will apply a default set of parameters that should reduce the size of most PDF files with embedded images. The SaveCompressed function will also accept parameters that allow direct control over what portions of the PDF file are compressed.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

@@ -4,11 +4,11 @@ ImageGear provides REST API to convert a PDF to PDF/A remotely.
 
 This example reads a PDF file to the stream and uploads it to the Accusoft API server where the PDF is converted to PDF/A. Then, the converted PDF/A is downloaded from the server and saved to a disk file.
 
-For more information about the ImageGear .NET REST API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET REST API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

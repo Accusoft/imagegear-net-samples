@@ -4,13 +4,13 @@ ImageGear can convert an Email file into a single-paged image file.
 
 This sample demonstrates converting an Email file to 2 raster image formats with ImageGear. To convert an Email file, load the Email document and save as an corresponding image document.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 **NOTE:** If you want Email document to be paginated you should first convert it to a PDF document and then convert each individual PDF page to a raster image as in PDFFileToMultipageTIFF sample.
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

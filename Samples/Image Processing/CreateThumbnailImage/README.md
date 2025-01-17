@@ -4,11 +4,11 @@ When an image thumbnail is needed, ImageGear can create a thumbnail from the ori
 
 After an image is loaded, use ImGearProcessing.CreateThumbnail() to create an thumbnail with specific dimensions. Interpolation options depend on the color space and bit depth of the image. Grayscale, PreserveBlack and PreserveWhite interpolations are applicable only to 1 bit images. Average and Bilinear interpolations are not applicable to 1 bit images nor to images having a non-gray palette. Also, Bilinear interpolation cannot be applied to an image if one of the dimensions is decreased. Use ImGearProcessingVerifier.CanApplyCreateThumbnail() method to check whether the operation can be performed.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

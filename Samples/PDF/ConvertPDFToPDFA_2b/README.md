@@ -4,11 +4,11 @@ When using ImageGear with PDF files, ImageGear can convert the PDF to be PDF/A-2
 
 This sample demonstrates how to take a PDF document loaded into ImageGear, and convert that PDF document to be compliant with the PDF/A-2b specification. In case any page of the PDF document can not be modified into compliance, the page can be rasterized, which is always compliant.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

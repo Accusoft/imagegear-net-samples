@@ -4,11 +4,11 @@ When a PDF needs to contain user input, ImageGear allows you to create PDF forms
 
 Starting with a PDF document, new or existing, first the PDF document is set to contain forms. Then form controls can be added to any page in the PDF document. These controls can be any of the Interactive Field Types as defined by the PDF Reference. Form controls can be assigned default values and values can be retrieved.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

@@ -9,9 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Accusoft.ImageGear.Core" Version="26.*" />
-    <PackageReference Include="Accusoft.ImageGear.Email" Version="26.*" />
-    <PackageReference Include="Accusoft.ImageGear.Pdf" Version="26.*" />
+    <PackageReference Include="Accusoft.ImageGearMP.Core" Version="27.*" />
+    <PackageReference Include="Accusoft.ImageGearMP.Email" Version="27.*" />
+    <PackageReference Include="Accusoft.ImageGearMP.Pdf" Version="27.*" />
   </ItemGroup>
 
 </Project>

@@ -4,11 +4,11 @@ Use ImageGear to read and update PDF metadata that provides descriptive and admi
 
 This sample reads and updates PDF metadata values for standard PDF document information dictionary keys (Author, Created, Creator, Keywords, Modified, Producer, Subject, and Title) before saving the updated PDF to a new file. PDF metadata describes details about the document's content and origin. This metadata is often used by other software to enhance workflows involving PDF documents.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 

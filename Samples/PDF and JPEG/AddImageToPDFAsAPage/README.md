@@ -4,11 +4,11 @@ When a JPEG raster image needs to be added to a PDF document as a page, ImageGea
 
 A single function, AddImage, is used to add a raster image to a PDF document as a page. The location on the PDF page can also be specified, in which case the image will be fit to that location ("fit" means that the aspect ratio of the raster image will not change). In this sample, the image is fit to the entire PDF page.
 
-For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html).
+For more information about the ImageGear .NET API, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html).
 
 ## System Requirements
 
-For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGear/latest/webframe.html#system-requirements.html).
+For a list of the system and development software necessary to build and run these samples, please refer to the [ImageGear .NET Online Documentation](https://help.accusoft.com/ImageGearMP/latest/webframe.html#system-requirements.html).
 
 ## Building the Sample
 
